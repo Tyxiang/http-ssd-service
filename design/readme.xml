@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ap:Map Dirty="0000000000000001" OId="Fq+X4tK7aECRTBVqdGlmDg==" Gen="0000000000000000"
+    xmlns:ap="http://schemas.mindjet.com/MindManager/Application/2003"
+    xmlns:cor="http://schemas.mindjet.com/MindManager/Core/2003"
+    xmlns:pri="http://schemas.mindjet.com/MindManager/Primitive/2003"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.mindjet.com/MindManager/Application/2003 http://schemas.mindjet.com/MindManager/Application/2003 http://schemas.mindjet.com/MindManager/Core/2003 http://schemas.mindjet.com/MindManager/Core/2003 http://schemas.mindjet.com/MindManager/Delta/2003 http://schemas.mindjet.com/MindManager/Delta/2003 http://schemas.mindjet.com/MindManager/Primitive/2003 http://schemas.mindjet.com/MindManager/Primitive/2003">
+    <cor:Custom Index="0" Uri="http://schemas.mindjet.com/MindManager/UpdateCompatibility/2004" Dirty="0000000000000000" cst0:UpdatedCategories="true" cst0:UpdatedVisibilityStyle="true" cst0:UpdatedDuration="true" cst0:UpdatedGanttViewProperties="true" cst0:UpdatedNamedView="true" cst0:UpdatedTextLabelSetIds="true" cst0:UpdatedBusinessTasks="true" cst0:UpdatedSmartFillToConditionalFormatting="true" cst0:UpdatedTaskHighlightingToConditionalFormatting="true" cst0:UpdatedMainTopicsOrder="true" cst0:UpdatedTopicLineWeights="true"
+        xmlns:cst0="http://schemas.mindjet.com/MindManager/UpdateCompatibility/2004"/>
+    <ap:OneTopic>
+        <ap:Topic Dirty="0000000000000001" OId="ROKke8ruk0GYQeZLdD6l5Q==" Gen="0000000000000000">
+            <cor:Custom Index="0" Uri="http://schemas.iaresearch.com/PTMAddin" Dirty="0000000000000001" cst0:Calendar="0111110" cst0:WorkHours="8" cst0:HighlightRollupOnly="0"
+                xmlns:cst0="http://schemas.iaresearch.com/PTMAddin"/>
+            <ap:SubTopics>
+                <ap:Topic Dirty="0000000000000001" OId="J9y5PgJZKU6lhjSxg0xfvw==" Gen="0000000000000000">
+                    <ap:SubTopics>
+                        <ap:Topic Dirty="0000000000000001" OId="SU9kfDTn+kCAVN6TsVngyg==" Gen="0000000000000000">
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/config" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000000" OId="O46vUTep50envNkVHxmn5A==" Gen="0000000000000000">
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000000" PlainText="/object" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="SBNnujLqFku56/MSuDPlMg==" Gen="0000000000000000">
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/script" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="RLQENDofY0ScLvchY+IZUg==" Gen="0000000000000000">
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/log" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="Sfq7TAw/Lkmg9MnAJhLLoA==" Gen="0000000000000000">
+                            <ap:TopicViewGroup ViewIndex="0"/>
+                            <ap:Text Dirty="0000000000000001" PlainText="/authn" ReadOnly="false">
+                                <ap:Font/>
+                                <ap:FontRange Size="10." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false" From="0" To="5"/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="D1hRSnBcikmZhT+7Si0suQ==" Gen="0000000000000000">
+                            <ap:TopicViewGroup ViewIndex="0"/>
+                            <ap:Text Dirty="0000000000000001" PlainText="/token" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                            <ap:Offset Dirty="0000000000000001" CX="70." CY="60."/>
+                        </ap:Topic>
+                    </ap:SubTopics>
+                    <ap:TopicViewGroup ViewIndex="0">
+                        <ap:Collapsed Collapsed="false" Dirty="0000000000000001"/>
+                    </ap:TopicViewGroup>
+                    <ap:Text Dirty="0000000000000001" PlainText="接口" ReadOnly="false">
+                        <ap:Font/>
+                    </ap:Text>
+                    <ap:Offset Dirty="0000000000000001" CX="2." CY="0."/>
+                </ap:Topic>
+                <ap:Topic Dirty="0000000000000001" OId="DvdXFihlKk+d1b1gzmmFSg==" Gen="0000000000000000">
+                    <ap:SubTopics>
+                        <ap:Topic Dirty="0000000000000001" OId="n0llJfJMF0WAAlB3SrrdEg==" Gen="0000000000000000">
+                            <ap:SubTopics>
+                                <ap:Topic Dirty="0000000000000001" OId="iBeDhqj5N0+UF65g7Fs11A==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000001" PlainText="default.json" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="sbMlNVNNUEymI29XLBANJg==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000001" PlainText="current.json" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000000" OId="O44gxhO0P0y9uHBm3NwNbw==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000000" PlainText="2021-07-28T22-27-06.json" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                            </ap:SubTopics>
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000001"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/config" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="rP0VvETJNUyvMoUwJ/6gDg==" Gen="0000000000000000">
+                            <ap:SubTopics>
+                                <ap:Topic Dirty="0000000000000001" OId="9cMlVE7W/kKZSySBTj9/8Q==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000001" PlainText="default.json" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000000" OId="CCLC88oR7UeMkCJn2vUIlg==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000000" PlainText="current.json" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="kpQLOVIV+0q0sAXLFIMTuQ==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000001" PlainText="2021-07-28T22-27-06.json" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                            </ap:SubTopics>
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000001"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/object" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="2CMSyzy1jUmimRkmkCSW1Q==" Gen="0000000000000000">
+                            <ap:SubTopics>
+                                <ap:Topic Dirty="0000000000000001" OId="pgYp/3E5u0+ixOlOg9hO8A==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000001" PlainText="default.lua" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                            </ap:SubTopics>
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000001"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/script" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="+i8O6BgoEE6Eo+IvRJ68vQ==" Gen="0000000000000000">
+                            <ap:SubTopics>
+                                <ap:Topic Dirty="0000000000000001" OId="WT5eJfUS00OU0GkAiOBVig==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                    <ap:Text Dirty="0000000000000001" PlainText="2021-07-28T22-35.log" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                            </ap:SubTopics>
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000001"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/log" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="oJxaHqRfQUaZEBwXsxazmA==" Gen="0000000000000000">
+                            <ap:SubTopics>
+                                <ap:Topic Dirty="0000000000000000" OId="wSf+Y/o0E0KKD0572KXuew==" Gen="0000000000000000">
+                                    <ap:SubTopics>
+                                        <ap:Topic Dirty="0000000000000000" OId="mc7P9DwVeUG7yx8UIKZ/ag==" Gen="0000000000000000">
+                                            <ap:TopicViewGroup ViewIndex="0"/>
+                                            <ap:Text Dirty="0000000000000000" PlainText="Authorization: Bearer &lt;access_token&gt;" ReadOnly="false">
+                                                <ap:Font/>
+                                                <ap:FontRange Size="9." Color="ff141414" Name="微软雅黑" Bold="false" Italic="false" Underline="false" Strikethrough="false" From="0" To="35"/>
+                                            </ap:Text>
+                                        </ap:Topic>
+                                    </ap:SubTopics>
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="header" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="2dodwlmKnk6Hh88jWhDLfw==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="POST /authns" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Offset Dirty="0000000000000000" CX="170." CY="160."/>
+                                    <ap:TopicLayout Dirty="0000000000000000" Width="88.10628509521484375"/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="qtaax16vLUeSPora18Q0KQ=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="KwrPqnKh806hNJGESDRecw==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="GET /authns" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Offset OffsetPriority="0" Dirty="0000000000000000" CX="190." CY="-50."/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="beFLsUJoTU2ra6clFvfK+g=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="Cg5ziK14XEay2xIeeZLdCw==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="GET /authns/{id}" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="scexbWimq0ahGwhDNwwgZw=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="sCVcQnK3MEOrq8dnel+bCg==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="PUT /authns/{id}/{field}" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="HbdX/IraOkWn1NgJMXjgyg=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="dQfJJre3BkWECqOZxtFcfg==" Gen="0000000000000000">
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="DELETE /authns/{id}" ReadOnly="false">
+                                        <ap:Font/>
+                                        <ap:FontRange Size="9." Color="ff141414" Name="微软雅黑" Bold="false" Italic="false" Underline="false" Strikethrough="false" From="0" To="18"/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="sGEACSn1fE2w/me14/lOcg=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                            </ap:SubTopics>
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/authn" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                            <ap:Offset Dirty="0000000000000001" CX="190." CY="-120."/>
+                        </ap:Topic>
+                        <ap:Topic Dirty="0000000000000001" OId="/hjKAh4/iEG+moNmqYMilw==" Gen="0000000000000000">
+                            <ap:SubTopics>
+                                <ap:Topic Dirty="0000000000000001" OId="dbN4U5ksAE+GxgQmIhKNEg==" Gen="0000000000000000">
+                                    <ap:SubTopics>
+                                        <ap:Topic Dirty="0000000000000000" OId="SyJFtSBirkO8sKhyhNeYnA==" Gen="0000000000000000">
+                                            <ap:SubTopics>
+                                                <ap:Topic Dirty="0000000000000000" OId="vA61tsWVDky2FECmouuGcQ==" Gen="0000000000000000">
+                                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                                    <ap:Text Dirty="0000000000000000" PlainText="Authorization: Basic base64(field:password)" ReadOnly="false">
+                                                        <ap:Font/>
+                                                    </ap:Text>
+                                                    <ap:TopicLayout Dirty="0000000000000000" Width="113.2416839599609375"/>
+                                                </ap:Topic>
+                                            </ap:SubTopics>
+                                            <ap:TopicViewGroup ViewIndex="0">
+                                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                            </ap:TopicViewGroup>
+                                            <ap:Text Dirty="0000000000000000" PlainText="header" ReadOnly="false">
+                                                <ap:Font/>
+                                                <ap:FontRange Size="9." Color="ff141414" Name="微软雅黑" Bold="false" Italic="false" Underline="false" Strikethrough="false" From="0" To="5"/>
+                                            </ap:Text>
+                                        </ap:Topic>
+                                    </ap:SubTopics>
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="GET /password" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Offset OffsetPriority="0" Dirty="0000000000000000" CX="270." CY="-20."/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="cwA+Wl7UMEW8dqz07sJVSg=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000001" OId="72nUhaptUEa64nYY+jJymw==" Gen="0000000000000000">
+                                    <ap:SubTopics>
+                                        <ap:Topic Dirty="0000000000000000" OId="y3TV3pO5M0WnqxKc4j+ObQ==" Gen="0000000000000000">
+                                            <ap:SubTopics>
+                                                <ap:Topic Dirty="0000000000000000" OId="D3WdNcQV0EiQufjM2aCXGQ==" Gen="0000000000000000">
+                                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                                    <ap:Text Dirty="0000000000000000" PlainText="email={email}" ReadOnly="false">
+                                                        <ap:Font/>
+                                                    </ap:Text>
+                                                </ap:Topic>
+                                            </ap:SubTopics>
+                                            <ap:TopicViewGroup ViewIndex="0">
+                                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                            </ap:TopicViewGroup>
+                                            <ap:Text Dirty="0000000000000000" PlainText="?" ReadOnly="false">
+                                                <ap:Font/>
+                                            </ap:Text>
+                                            <ap:Offset Dirty="0000000000000000" CX="180." CY="150."/>
+                                            <ap:TopicLayout Dirty="0000000000000000" Width="5.143530368804931640625"/>
+                                        </ap:Topic>
+                                    </ap:SubTopics>
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="GET /elink" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                                    <ap:Offset OffsetPriority="0" Dirty="0000000000000000" CX="270." CY="20."/>
+                                    <ap:Task TaskPercentage="100" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                    <ap:ConditionalFormattingSettingsGroup>
+                                        <ap:PreviousEffectsGroup>
+                                            <ap:EffectGroup>
+                                                <ap:Id Dirty="0000000000000001" Guid="EyVGYeP6UkCE4FbzfJMDZw=="/>
+                                                <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                                                <ap:Color Dirty="0000000000000001" FillColor="00000000"/>
+                                                <ap:RuleId Dirty="0000000000000001" Guid="01T4bRzWrUexHB3iaWv6Lg=="/>
+                                            </ap:EffectGroup>
+                                        </ap:PreviousEffectsGroup>
+                                    </ap:ConditionalFormattingSettingsGroup>
+                                </ap:Topic>
+                                <ap:Topic Dirty="0000000000000000" OId="bL44tLMykESgmpzYkIWZ9g==" Gen="0000000000000000">
+                                    <ap:SubTopics>
+                                        <ap:Topic Dirty="0000000000000000" OId="ApEkLwBsDEyMWeJM6DM+IQ==" Gen="0000000000000000">
+                                            <ap:SubTopics>
+                                                <ap:Topic Dirty="0000000000000000" OId="dy5CnU1dOkSkVhtXXuLTLQ==" Gen="0000000000000000">
+                                                    <ap:TopicViewGroup ViewIndex="0"/>
+                                                    <ap:Text Dirty="0000000000000000" PlainText="Authorization: Smvc base64(phone:smvc)" ReadOnly="false">
+                                                        <ap:Font/>
+                                                    </ap:Text>
+                                                    <ap:Offset OffsetPriority="0" Dirty="0000000000000000" CX="330." CY="100."/>
+                                                    <ap:TopicLayout Dirty="0000000000000000" Width="113.2416839599609375"/>
+                                                </ap:Topic>
+                                            </ap:SubTopics>
+                                            <ap:TopicViewGroup ViewIndex="0">
+                                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                            </ap:TopicViewGroup>
+                                            <ap:Text Dirty="0000000000000000" PlainText="header" ReadOnly="false">
+                                                <ap:Font/>
+                                            </ap:Text>
+                                        </ap:Topic>
+                                    </ap:SubTopics>
+                                    <ap:TopicViewGroup ViewIndex="0">
+                                        <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                                    </ap:TopicViewGroup>
+                                    <ap:Text Dirty="0000000000000000" PlainText="GET /smvc" ReadOnly="false">
+                                        <ap:Font/>
+                                    </ap:Text>
+                                    <ap:Offset OffsetPriority="0" Dirty="0000000000000000" CX="270." CY="20."/>
+                                    <ap:Task TaskPercentage="0" Dirty="0000000000000000" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                                </ap:Topic>
+                            </ap:SubTopics>
+                            <ap:TopicViewGroup ViewIndex="0">
+                                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+                            </ap:TopicViewGroup>
+                            <ap:Text Dirty="0000000000000001" PlainText="/token" ReadOnly="false">
+                                <ap:Font/>
+                            </ap:Text>
+                            <ap:Offset Dirty="0000000000000001" CX="180." CY="-30."/>
+                        </ap:Topic>
+                    </ap:SubTopics>
+                    <ap:TopicViewGroup ViewIndex="0">
+                        <ap:Collapsed Collapsed="false" Dirty="0000000000000001"/>
+                    </ap:TopicViewGroup>
+                    <ap:Text Dirty="0000000000000001" PlainText="文件" ReadOnly="false">
+                        <ap:Font/>
+                    </ap:Text>
+                    <ap:Offset Dirty="0000000000000001" CX="2." CY="0."/>
+                </ap:Topic>
+            </ap:SubTopics>
+            <ap:TopicViewGroup ViewIndex="0">
+                <ap:Collapsed Collapsed="false" Dirty="0000000000000000"/>
+            </ap:TopicViewGroup>
+        </ap:Topic>
+    </ap:OneTopic>
+    <ap:StyleGroup>
+        <ap:RootTopicDefaultsGroup>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="ffecf4fa" LineColor="ff3283c0"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Center" TextCapitalization="urn:mindjet:SentenceStyle" VerticalTextAlignment="urn:mindjet:Top" Dirty="0000000000000000" PlainText="Central Topic" ReadOnly="false">
+                <ap:Font Size="14." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:RoundedRectangle" Dirty="0000000000000000" LeftMargin="4." RightMargin="4." TopMargin="4." BottomMargin="4." VerticalLeftMargin="4." VerticalRightMargin="4." VerticalTopMargin="4." VerticalBottomMargin="4." VerticalSubTopicShape="urn:mindjet:RoundedRectangle"/>
+            <ap:DefaultLabelFloatingTopicShape LabelFloatingTopicShape="urn:mindjet:None" Dirty="0000000000000000" LeftMargin="0." RightMargin="0." TopMargin="0." BottomMargin="0." VerticalLeftMargin="2.5" VerticalRightMargin="2.5" VerticalTopMargin="2.5" VerticalBottomMargin="2.5" VerticalLabelFloatingTopicShape="urn:mindjet:None"/>
+            <ap:DefaultCalloutFloatingTopicShape CalloutFloatingTopicShape="urn:mindjet:None" Dirty="0000000000000000" LeftMargin="0." RightMargin="0." TopMargin="0." BottomMargin="0." VerticalLeftMargin="2.5" VerticalRightMargin="2.5" VerticalTopMargin="2.5" VerticalBottomMargin="2.5" VerticalCalloutFloatingTopicShape="urn:mindjet:None"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" TopicWidthControl="urn:mindjet:AutoWidth" Dirty="0000000000000000" Width="80." MinimumHeight="5." Padding="2." IsUsingFixedSize="false" FixedWidth="75." FixedHeight="25." IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:LeftAndRight" SubTopicsShape="urn:mindjet:Vertical" SubTopicsShapeWidthFactor="1." SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:UpAndDown" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsDepth="1" SubTopicsAlignmentDualVertical="urn:mindjet:Bottom" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:RootTopicDefaultsGroup>
+        <ap:RootSubTopicDefaultsGroup Level="0">
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="ffecf4fa" LineColor="ff3283c0"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="Main Topic" ReadOnly="false">
+                <ap:Font Size="12." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="0.5" RightMargin="0.5" TopMargin="2." BottomMargin="2." VerticalLeftMargin="0.5" VerticalRightMargin="0.5" VerticalTopMargin="2." VerticalBottomMargin="2." VerticalSubTopicShape="urn:mindjet:Capsule"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" Dirty="0000000000000000" Width="150." Padding="2." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsAlignmentDualVertical="urn:mindjet:Bottom" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:RootSubTopicDefaultsGroup>
+        <ap:RootSubTopicDefaultsGroup Level="1">
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="00000000"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="Subtopic" ReadOnly="false">
+                <ap:Font Size="10." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Line" Dirty="0000000000000000" LeftMargin="0.800000011920928955078125" RightMargin="0.800000011920928955078125" TopMargin="0.800000011920928955078125" BottomMargin="0.800000011920928955078125" VerticalLeftMargin="0.800000011920928955078125" VerticalRightMargin="0.800000011920928955078125" VerticalTopMargin="0.800000011920928955078125" VerticalBottomMargin="0.800000011920928955078125" VerticalSubTopicShape="urn:mindjet:Line"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" Dirty="0000000000000000" Width="60.700000762939453125" Padding="1." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsAlignmentDualVertical="urn:mindjet:Bottom" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:RootSubTopicDefaultsGroup>
+        <ap:CalloutTopicDefaultsGroup>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="fffbd1bc" LineColor="ffcf4d0c"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="Callout" ReadOnly="false">
+                <ap:Font Size="10." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultCalloutFloatingTopicShape CalloutFloatingTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="0.5" RightMargin="0.5" TopMargin="2." BottomMargin="2." VerticalLeftMargin="0.5" VerticalRightMargin="0.5" VerticalTopMargin="2." VerticalBottomMargin="2." VerticalCalloutFloatingTopicShape="urn:mindjet:Capsule"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" Dirty="0000000000000000" Width="61." Padding="2." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsAlignmentDualVertical="urn:mindjet:Center" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:CalloutTopicDefaultsGroup>
+        <ap:CalloutSubTopicDefaultsGroup Level="0">
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="00000000"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="Subtopic" ReadOnly="false">
+                <ap:Font Size="10." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Line" Dirty="0000000000000000" LeftMargin="0.800000011920928955078125" RightMargin="0.800000011920928955078125" TopMargin="0.800000011920928955078125" BottomMargin="0.800000011920928955078125" VerticalLeftMargin="0.800000011920928955078125" VerticalRightMargin="0.800000011920928955078125" VerticalTopMargin="0.800000011920928955078125" VerticalBottomMargin="0.800000011920928955078125" VerticalSubTopicShape="urn:mindjet:Line"/>
+            <ap:DefaultTopicLayout Dirty="0000000000000000" IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsAlignmentDualVertical="urn:mindjet:Center"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:CalloutSubTopicDefaultsGroup>
+        <ap:LabelTopicDefaultsGroup>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="ffecf4fa" LineColor="ff3283c0"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="Floating Topic" ReadOnly="false">
+                <ap:Font Size="12." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultLabelFloatingTopicShape LabelFloatingTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="0.5" RightMargin="0.5" TopMargin="2." BottomMargin="2." VerticalLeftMargin="0.5" VerticalRightMargin="0.5" VerticalTopMargin="2." VerticalBottomMargin="2." VerticalLabelFloatingTopicShape="urn:mindjet:Capsule"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" Dirty="0000000000000000" Width="90." Padding="2." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:Down" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsDepth="1" SubTopicsAlignmentDualVertical="urn:mindjet:Center" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:LabelTopicDefaultsGroup>
+        <ap:LabelSubTopicDefaultsGroup Level="0">
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="00000000"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="Subtopic" ReadOnly="false">
+                <ap:Font Size="10." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Line" Dirty="0000000000000000" LeftMargin="0.800000011920928955078125" RightMargin="0.800000011920928955078125" TopMargin="0.800000011920928955078125" BottomMargin="0.800000011920928955078125" VerticalLeftMargin="0.800000011920928955078125" VerticalRightMargin="0.800000011920928955078125" VerticalTopMargin="0.800000011920928955078125" VerticalBottomMargin="0.800000011920928955078125" VerticalSubTopicShape="urn:mindjet:Line"/>
+            <ap:DefaultTopicLayout Dirty="0000000000000000" Width="61." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsAlignmentDualVertical="urn:mindjet:Bottom" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:LabelSubTopicDefaultsGroup>
+        <ap:OrgChartTopicDefaultsGroup>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="ffecf4fa" LineColor="ff3283c0"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" VerticalTextAlignment="urn:mindjet:Top" Dirty="0000000000000000" PlainText="Org-Chart Topic" ReadOnly="false">
+                <ap:Font Size="12." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="0.5" RightMargin="0.5" TopMargin="2." BottomMargin="2." VerticalLeftMargin="0.5" VerticalRightMargin="0.5" VerticalTopMargin="2." VerticalBottomMargin="2." VerticalSubTopicShape="urn:mindjet:Capsule"/>
+            <ap:DefaultLabelFloatingTopicShape LabelFloatingTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="2." RightMargin="2." TopMargin="2." BottomMargin="2." VerticalLeftMargin="5." VerticalRightMargin="5." VerticalTopMargin="2." VerticalBottomMargin="2." VerticalLabelFloatingTopicShape="urn:mindjet:RoundedRectangle"/>
+            <ap:DefaultCalloutFloatingTopicShape CalloutFloatingTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="2." RightMargin="2." TopMargin="2." BottomMargin="2." VerticalLeftMargin="5." VerticalRightMargin="5." VerticalTopMargin="2." VerticalBottomMargin="2." VerticalCalloutFloatingTopicShape="urn:mindjet:RoundedRectangleBalloon"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" TopicWidthControl="urn:mindjet:AutoWidth" Dirty="0000000000000000" Width="150." MinimumHeight="5." Padding="2." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Center" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Vertical" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsShapeWidthFactor="1." SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsDepth="1" SubTopicsAlignmentDualVertical="urn:mindjet:Center" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:OrgChartTopicDefaultsGroup>
+        <ap:OrgChartSubTopicDefaultsGroup Level="0">
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="00000000"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" VerticalTextAlignment="urn:mindjet:Top" Dirty="0000000000000000" PlainText="Subtopic" ReadOnly="false">
+                <ap:Font Size="10." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Line" Dirty="0000000000000000" LeftMargin="0.800000011920928955078125" RightMargin="0.800000011920928955078125" TopMargin="0.800000011920928955078125" BottomMargin="0.800000011920928955078125" VerticalLeftMargin="0.800000011920928955078125" VerticalRightMargin="0.800000011920928955078125" VerticalTopMargin="0.800000011920928955078125" VerticalBottomMargin="0.800000011920928955078125" VerticalSubTopicShape="urn:mindjet:Line"/>
+            <ap:DefaultCalloutFloatingTopicShape Dirty="0000000000000000" VerticalLeftMargin="2." VerticalRightMargin="2." VerticalTopMargin="2." VerticalBottomMargin="2." VerticalCalloutFloatingTopicShape="urn:mindjet:RectangleBalloon"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" TopicWidthControl="urn:mindjet:AutoWidth" Dirty="0000000000000000" Width="60.700000762939453125" MinimumHeight="5." Padding="1." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Bottom" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsShapeWidthFactor="1." SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsDepth="1" SubTopicsAlignmentDualVertical="urn:mindjet:Center" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:OrgChartSubTopicDefaultsGroup>
+        <ap:RelationshipDefaultsGroup>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="00000000" LineColor="ffcf4d0c"/>
+            <ap:DefaultLineStyle LineDashStyle="urn:mindjet:Solid" Dirty="0000000000000000" LineWidth="1.5"/>
+            <ap:DefaultConnectionStyle ConnectionShape="urn:mindjet:NoArrow" Index="0" Dirty="0000000000000000"/>
+            <ap:DefaultConnectionStyle ConnectionShape="urn:mindjet:Arrow" Index="1" Dirty="0000000000000000"/>
+            <ap:DefaultRelationshipLineShape LineShape="urn:mindjet:Bezier" Dirty="0000000000000000"/>
+        </ap:RelationshipDefaultsGroup>
+        <ap:BoundaryDefaultsGroup>
+            <ap:DefaultLineStyle LineDashStyle="urn:mindjet:Solid" Dirty="0000000000000000" LineWidth="1.5"/>
+            <ap:DefaultBoundaryShape BoundaryShape="urn:mindjet:CurvedLine" Dirty="0000000000000000" Margin="0."/>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="fffbd1bc" LineColor="ffcf4d0c"/>
+        </ap:BoundaryDefaultsGroup>
+        <ap:Structure StructureGrowthDirection="urn:mindjet:Automatic" Dirty="0000000000000000" UseAutoLayout="true" MinimumMainTopicsHeight="12." FadeNotSelectedObjects="true" UseCurveAntialiasing="true" UseTextAntialiasing="true" MainTopicLineWidth="0.529166698455810546875" VerticalMainTopicLineWidth="0.529166698455810546875" SiblingSpacing="0." ParentChildSpacing="0." UseOrganicLines="false" HideCollapseSign="false" UseLineWidthForAllTopics="true"/>
+        <ap:BackgroundFill Dirty="0000000000000000" FillColor="ffffffff"/>
+        <ap:NotesDefaultFont Size="10." Color="ff000000" Dirty="0000000000000000" Name="Verdana"/>
+        <ap:TimelineSubTopicDefaultsGroup Level="0">
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="ffecf4fa" LineColor="ff3283c0"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Left" TextCapitalization="urn:mindjet:None" Dirty="0000000000000000" PlainText="" ReadOnly="false">
+                <ap:Font Size="12." Color="ff000000" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultSubTopicShape SubTopicShape="urn:mindjet:Capsule" Dirty="0000000000000000" LeftMargin="0.5" RightMargin="0.5" TopMargin="2." BottomMargin="2." VerticalLeftMargin="0.5" VerticalRightMargin="0.5" VerticalTopMargin="2." VerticalBottomMargin="2." VerticalSubTopicShape="urn:mindjet:Capsule"/>
+            <ap:DefaultTopicLayout TopicLayoutHorizontalAlignment="urn:mindjet:Center" TopicLayoutVerticalAlignment="urn:mindjet:Center" TopicTextAndImagePosition="urn:mindjet:TextRightImageLeft" Dirty="0000000000000000" Width="150." Padding="2." IsUsingFixedSize="false" IsTidy="false"/>
+            <ap:DefaultSubTopicsShape SubTopicsAlignment="urn:mindjet:Bottom" SubTopicsConnectionPoint="urn:mindjet:Outside" SubTopicsConnectionStyle="urn:mindjet:RoundedElbow" SubTopicsGrowth="urn:mindjet:Horizontal" SubTopicsGrowthDirection="urn:mindjet:AutomaticHorizontal" SubTopicsShape="urn:mindjet:Vertical" SubTopicsVerticalAlignment="urn:mindjet:Middle" SubTopicsVerticalGrowthDirection="urn:mindjet:AutomaticVertical" Dirty="0000000000000000" DistanceFromParent="2." VerticalDistanceFromParent="2." DistanceBetweenSiblings="2." VerticalDistanceBetweenSiblings="2." SubTopicsAlignmentDualVertical="urn:mindjet:Bottom" SubTopicsTreeConnectionPoint="urn:mindjet:Inside" VerticalSubTopicsConnectionStyle="urn:mindjet:RoundedElbow" VerticalSubTopicsConnectionPoint="urn:mindjet:Outside" VerticalSubTopicsTreeConnectionPoint="urn:mindjet:Inside"/>
+            <ap:DefaultSubTopicsVisibility Dirty="0000000000000000" Hidden="false"/>
+        </ap:TimelineSubTopicDefaultsGroup>
+        <ap:BackgroundObjectDefaultsGroup>
+            <ap:DefaultColor Dirty="0000000000000000" FillColor="00ffffff" LineColor="ff444444"/>
+            <ap:DefaultLineStyle LineDashStyle="urn:mindjet:Solid" Dirty="0000000000000000" LineWidth="1."/>
+            <ap:DefaultBackgroundObjectType BackgroundObjectType="urn:mindjet:Rectangle" Dirty="0000000000000000"/>
+            <ap:DefaultText TextAlignment="urn:mindjet:Center" TextCapitalization="urn:mindjet:None" VerticalTextAlignment="urn:mindjet:Top" Dirty="0000000000000001" PlainText="Text Label" ReadOnly="false">
+                <ap:Font Size="14." Color="ff444444" Name="Segoe UI" Bold="false" Italic="false" Underline="false" Strikethrough="false"/>
+            </ap:DefaultText>
+            <ap:DefaultRectangleSize Dirty="0000000000000000" Width="211.6699981689453125" Height="105.8300018310546875"/>
+            <ap:DefaultCircleSize Dirty="0000000000000000" Width="105.8300018310546875" Height="105.8300018310546875"/>
+            <ap:DefaultHorizontalDividerSize Dirty="0000000000000000" Width="211.6699981689453125" Height="0."/>
+            <ap:DefaultVerticalDividerSize Dirty="0000000000000000" Width="0." Height="211.6699981689453125"/>
+            <ap:DefaultTextSize Dirty="0000000000000000" Width="31.75" Height="9.2600002288818359375"/>
+            <ap:DefaultHorizontalSwimlanesSize Dirty="0000000000000000" Width="211.6699981689453125" Height="105.8300018310546875"/>
+            <ap:DefaultVerticalSwimlanesSize Dirty="0000000000000000" Width="105.8300018310546875" Height="211.6699981689453125"/>
+            <ap:DefaultHorizontalSwimlaneCount SwimlaneCount="2" Dirty="0000000000000000"/>
+            <ap:DefaultVerticalSwimlaneCount SwimlaneCount="2" Dirty="0000000000000000"/>
+            <ap:DefaultFillet Dirty="0000000000000000" Radius="1.7999999523162841796875"/>
+        </ap:BackgroundObjectDefaultsGroup>
+        <ap:AppliedStyleName Dirty="0000000000000000" Name=""/>
+    </ap:StyleGroup>
+    <ap:MapViewGroup ViewContext="urn:mindjet:Map" ViewIndex="0" RowIndex="0" ColumnIndex="0">
+        <ap:ZoomFactor ZoomFactor="1." Dirty="0000000000000000"/>
+    </ap:MapViewGroup>
+    <ap:DocumentGroup>
+        <ap:Language Dirty="0000000000000000" Language="en"/>
+        <ap:Creator Dirty="0000000000000000" UserName="" UserEmail=""/>
+        <ap:LastModificator Dirty="0000000000000001" UserName="tyx" UserEmail=""/>
+        <ap:Author Dirty="0000000000000000" UserName="" UserEmail=""/>
+        <ap:Version Dirty="0000000000000001" Major="15"/>
+        <ap:Statistics Dirty="0000000000000001" NumberOfTopics="39" NumberOfWords="54" NumberOfHyperlinks="0" NumberOfRelationships="0" NumberOfPictures="0" NumberOfBoundaries="0" NumberOfNotes="0"/>
+        <ap:DateTimeStamps Dirty="0000000000000001" Created="2021-07-28T23:26:55" LastModified="2021-08-02T10:12:55"/>
+        <ap:Description Comments="This is a blank template. This classic mindmap layout allows subtopics to be organized on both sides of the central topic." Dirty="0000000000000000"/>
+        <ap:CreatorCompany Dirty="0000000000000000" Name=""/>
+        <ap:PreviewImageData ImageType="urn:mindjet:PngImage" Dirty="0000000000000001" CustomImageType="">
+            <cor:Base64 xsi:nil="false">iVBORw0KGgoAAAANSUhEUgAAAPoAAADcCAMAAAEZwHyyAAADAFBMVEX////39//v9//O773O5++176Xe99YxhMal3oyEtd7e7/elra291v+tra3v/++t55S11u9ape+EtXPOzs693u97rdbe3t5jpdbn7/eMvXvn5+e1vb3n9//39/e1tb2Uvd7G3u+UxoQptQBKlM7O1tZ7tdZrpe+cxt7O79Z7td611ue9vb2czoSMjIxjvTmMtXNSlM4prQDW984xe87v7++UxnucpaW1tbXW5/c5jMZanM6Mvd57pWvv/+ec1oxrpdbGxsa9xs6lxue91u/W1tbn7++lpaUhjACUnKVKlMZzrdY5hMaErXPO5/djnM5zc3Njpc7G77X3//9znGOlzucppQCErc6UlJzGztatrbVrjFqcxuetzueMtd5CjMZrlFqcnJwpa7WMjJTO3u97e4RSnM73//eUlJTW1t7e5+eEhIRra3NjhFLW3ud7e3uEjIxanO/n9+dClMZjY2P///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+GScqaAAAACXBIWXMAAC4kAAAuJAEq4ZkJAAASSklEQVR4nO1d32/byLXONdxIlsvyYSCAGmNW9oPqQlSX1i3ohyCArWSgRLaguhD2XmPB2Gm0aHK7ddtF//15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</cor:Base64>
+        </ap:PreviewImageData>
+        <ap:DocumentPath Dirty="0000000000000001" DocumentPath="\\T14\D\Document\4_Jialo\http-object\design\readme (2).xmmap"/>
+        <ap:LayoutOptions FloatingTopicLayout="urn:mindjet:NewLayout" Dirty="0000000000000000"/>
+        <ap:ViewContext ViewContext="urn:mindjet:Map" Dirty="0000000000000000"/>
+    </ap:DocumentGroup>
+    <ap:MarkersSetGroup>
+        <ap:IconMarkersSets>
+            <ap:IconMarkersSet Dirty="0000000000000000" OId="LD2L2NoPDkKmTkBoMPi2BA==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Flags"/>
+                <ap:IconMarkers>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="sDH2JV+fPUuIYsBtf9Y3rQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Yes"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagGreen" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="mNYynkfiJkWr8+SCCNTO5g==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Maybe"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagYellow" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="oXMeiiX3Ek+BL+MOr+DsIQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Discuss"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagOrange" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="01JC/CZIjUKOAGTU2+e8YQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Risk"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagRed" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="Dklfbe9IXkeS5WQrBaeFuQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Move"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagPurple" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="o/BeFHaFn0qAdGktTOzQhw==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Defer"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagBlue" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="mJT/aPHYm0SFZZzmb/tk1w==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="No"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:FlagBlack" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                </ap:IconMarkers>
+            </ap:IconMarkersSet>
+            <ap:IconMarkersSet Dirty="0000000000000000" OId="4zG+XtvddUCZBd399fkp4w==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Arrows"/>
+                <ap:IconMarkers>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="Fek7YaPIWUSGEOm6oSZIEQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Up"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:ArrowUp" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="Nu8duX90BEy5DLeMwNBy5w==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Down"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:ArrowDown" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="t0gkx1fbE0G1+wBLaxAfJQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Left"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:ArrowLeft" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="ri/Njiku0UuGmS4YjNiglg==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Right"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:ArrowRight" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                </ap:IconMarkers>
+            </ap:IconMarkersSet>
+            <ap:IconMarkersSet Dirty="0000000000000000" OId="/7g7HsVGHkaIKc52h6hrdA==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Smileys"/>
+                <ap:IconMarkers>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="KHVqYQxFBkeQ8tGP6YbrvA==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Happy"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:SmileyHappy" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="Fk/vR2cVsUeJ1CxlKJmqiw==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Neutral"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:SmileyNeutral" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                    <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="8ZxLBv0BRk6CiFU413aKyw==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Sad"/>
+                        <ap:OneStockIcon IconType="urn:mindjet:SmileySad" Dirty="0000000000000000"/>
+                    </ap:IconMarker>
+                </ap:IconMarkers>
+            </ap:IconMarkersSet>
+        </ap:IconMarkersSets>
+        <ap:IconMarkers>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="A/EuTJ3DWE+qupRSNupQyg==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Pro"/>
+                <ap:OneStockIcon IconType="urn:mindjet:ThumbsUp" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="Wo1ScogNfUmKBArzwwoaGQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Con"/>
+                <ap:OneStockIcon IconType="urn:mindjet:ThumbsDown" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="YLDRvVSIS0ixdfdicsmjxQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Question"/>
+                <ap:OneStockIcon IconType="urn:mindjet:QuestionMark" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="WpuChjk5f0WP2zUA17TJHQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Attention"/>
+                <ap:OneStockIcon IconType="urn:mindjet:ExclamationMark" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="t77VB4ABJkWYKf9b42K0PQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Decision"/>
+                <ap:OneStockIcon IconType="urn:mindjet:JudgeHammer" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="uU0NOeETwk+aXWBDFlNg5Q==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Date"/>
+                <ap:OneStockIcon IconType="urn:mindjet:Calendar" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="O38m2vOCm0OYgkLwOn9NqQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Cost"/>
+                <ap:OneStockIcon IconType="urn:mindjet:Dollar" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+            <ap:IconMarker xsi:type="ap:StockIconMarker" Dirty="0000000000000000" OId="a9EMQiAPtkaXqvZo3iEhPA==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Alarm"/>
+                <ap:OneStockIcon IconType="urn:mindjet:Emergency" Dirty="0000000000000000"/>
+            </ap:IconMarker>
+        </ap:IconMarkers>
+        <ap:FillColorMarkersName Dirty="0000000000000000" Name="Fill Colors"/>
+        <ap:TextColorMarkersName Dirty="0000000000000000" Name="Font Colors"/>
+        <ap:TaskPercentageMarkersName Dirty="0000000000000000" Name="Progress"/>
+        <ap:TaskPercentageMarkers>
+            <ap:TaskPercentageMarker Dirty="0000000000000000" OId="AVJdGkOdo0SERPWDSZIWSw==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Not done"/>
+                <ap:TaskPercentage TaskPercentage="0" Dirty="0000000000000000"/>
+            </ap:TaskPercentageMarker>
+            <ap:TaskPercentageMarker Dirty="0000000000000000" OId="smSDmeuTPkW4zjuLL19tOg==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="25% done"/>
+                <ap:TaskPercentage TaskPercentage="25" Dirty="0000000000000000"/>
+            </ap:TaskPercentageMarker>
+            <ap:TaskPercentageMarker Dirty="0000000000000000" OId="Va+gOPoolU23CfJPTgVnoA==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="50% done"/>
+                <ap:TaskPercentage TaskPercentage="50" Dirty="0000000000000000"/>
+            </ap:TaskPercentageMarker>
+            <ap:TaskPercentageMarker Dirty="0000000000000000" OId="suaDrCE73kGsepPoff7Wwg==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="75% done"/>
+                <ap:TaskPercentage TaskPercentage="75" Dirty="0000000000000000"/>
+            </ap:TaskPercentageMarker>
+            <ap:TaskPercentageMarker Dirty="0000000000000000" OId="A0TKyHBUEkO+WJEZlOadMA==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Task done"/>
+                <ap:TaskPercentage TaskPercentage="100" Dirty="0000000000000000"/>
+            </ap:TaskPercentageMarker>
+        </ap:TaskPercentageMarkers>
+        <ap:TaskPriorityMarkersName Dirty="0000000000000000" Name="Priority"/>
+        <ap:TaskPriorityMarkers>
+            <ap:TaskPriorityMarker Dirty="0000000000000000" OId="vR7TCbueEEe/Pq5lHFD+DA==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Priority 1"/>
+                <ap:TaskPriority TaskPriority="urn:mindjet:Prio1" Dirty="0000000000000000"/>
+            </ap:TaskPriorityMarker>
+            <ap:TaskPriorityMarker Dirty="0000000000000000" OId="VyGImJJY0ES4UOL+0GjgfQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Priority 2"/>
+                <ap:TaskPriority TaskPriority="urn:mindjet:Prio2" Dirty="0000000000000000"/>
+            </ap:TaskPriorityMarker>
+            <ap:TaskPriorityMarker Dirty="0000000000000000" OId="2yzryL42WkCB1Tx9hQuBfg==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Priority 3"/>
+                <ap:TaskPriority TaskPriority="urn:mindjet:Prio3" Dirty="0000000000000000"/>
+            </ap:TaskPriorityMarker>
+            <ap:TaskPriorityMarker Dirty="0000000000000000" OId="Kur9ifP6ck+Sm5VeOvg+sw==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Priority 4"/>
+                <ap:TaskPriority TaskPriority="urn:mindjet:Prio4" Dirty="0000000000000000"/>
+            </ap:TaskPriorityMarker>
+            <ap:TaskPriorityMarker Dirty="0000000000000000" OId="5SS9Nsar/EGMDF57M+H3MQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Priority 5"/>
+                <ap:TaskPriority TaskPriority="urn:mindjet:Prio5" Dirty="0000000000000000"/>
+            </ap:TaskPriorityMarker>
+        </ap:TaskPriorityMarkers>
+        <ap:TextLabelMarkersSets>
+            <ap:TextLabelMarkersSet Dirty="0000000000000000" OId="frwdO6pnbE+vMKZuOfnFdQ==" Gen="0000000000000000">
+                <ap:Name Dirty="0000000000000000" Name="Kanban"/>
+                <ap:TextLabelMarkers>
+                    <ap:TextLabelMarker Dirty="0000000000000000" OId="e/EPuaGLwk69PzG1C3hqdQ==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="To Do"/>
+                    </ap:TextLabelMarker>
+                    <ap:TextLabelMarker Dirty="0000000000000000" OId="19BoHCBuxkqLfm774mjYNw==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Doing"/>
+                    </ap:TextLabelMarker>
+                    <ap:TextLabelMarker Dirty="0000000000000000" OId="lPx1ubuEw0CYWykMASz4YA==" Gen="0000000000000000">
+                        <ap:Name Dirty="0000000000000000" Name="Done"/>
+                    </ap:TextLabelMarker>
+                </ap:TextLabelMarkers>
+                <ap:TextLabelMarkersSetOptions Dirty="0000000000000000" MutuallyExclusive="true" ReadOnly="false" AssignDisabled="false"/>
+            </ap:TextLabelMarkersSet>
+        </ap:TextLabelMarkersSets>
+    </ap:MarkersSetGroup>
+    <ap:ConditionalFormattingRulesGroup>
+        <ap:NamedRuleGroup UniqueIndex="hS+yFEspqkakg4wqvDJsuQ==">
+            <ap:GroupName Dirty="0000000000000001" Name="Highlight At-Risk Tasks"/>
+            <ap:Id Dirty="0000000000000001" Guid="Itp8eYS17EqC78Y6ZLTVDg=="/>
+            <ap:TriggersGroup>
+                <ap:MatchOption Dirty="0000000000000001" Match="urn:mindjet:MatchAll"/>
+                <ap:TriggerGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="J7chJhXs4E2Cd5wwQofPgw=="/>
+                    <ap:TriggerType TriggerType="urn:mindjet:TaskAtRisk" Dirty="0000000000000001"/>
+                    <ap:ComparisonValue Dirty="0000000000000001" Boolean="true"/>
+                </ap:TriggerGroup>
+            </ap:TriggersGroup>
+            <ap:EffectsGroup>
+                <ap:EffectGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="eEYflFBQzEelDvGjIAn+qA=="/>
+                    <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                    <ap:Color Dirty="0000000000000001" FillColor="ffffffb9"/>
+                </ap:EffectGroup>
+                <ap:EffectGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="FmcUq1nbN0SOFLpMpkZFyg=="/>
+                    <ap:EffectType EffectType="urn:mindjet:TopicIcon" Dirty="0000000000000001"/>
+                    <ap:IconMarker Dirty="0000000000000001" Name="Attention" UseStockIcon="true" StockIconType="urn:mindjet:ExclamationMark"/>
+                </ap:EffectGroup>
+            </ap:EffectsGroup>
+        </ap:NamedRuleGroup>
+        <ap:NamedRuleGroup UniqueIndex="01T4bRzWrUexHB3iaWv6Lg==">
+            <ap:GroupName Dirty="0000000000000001" Name="Highlight Completed Tasks"/>
+            <ap:Id Dirty="0000000000000001" Guid="Bpoqf+/e8kKY7S8gD/OOzw=="/>
+            <ap:TriggersGroup>
+                <ap:MatchOption Dirty="0000000000000001" Match="urn:mindjet:MatchAll"/>
+                <ap:TriggerGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="YIuQPKBcBUKTjiztnurqsw=="/>
+                    <ap:TriggerType TriggerType="urn:mindjet:TaskPercentage" Dirty="0000000000000001"/>
+                    <ap:Task TaskPercentage="100" Dirty="0000000000000001" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                </ap:TriggerGroup>
+            </ap:TriggersGroup>
+            <ap:EffectsGroup>
+                <ap:EffectGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="EK8vw5dV2UqxHuB31bJn/A=="/>
+                    <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                    <ap:Color Dirty="0000000000000001" FillColor="ffabe595"/>
+                </ap:EffectGroup>
+            </ap:EffectsGroup>
+        </ap:NamedRuleGroup>
+        <ap:NamedRuleGroup UniqueIndex="maHnU1gbVEaA9A1tCSAaew==">
+            <ap:GroupName Dirty="0000000000000001" Name="Highlight Past-Due Tasks"/>
+            <ap:Id Dirty="0000000000000001" Guid="Bpoqf+/e8kKY7S8gD/OOzw=="/>
+            <ap:TriggersGroup>
+                <ap:MatchOption Dirty="0000000000000001" Match="urn:mindjet:MatchAll"/>
+                <ap:TriggerGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="X+c+v8gEQk6FR349361tuQ=="/>
+                    <ap:TriggerType TriggerType="urn:mindjet:TaskDeadline" Dirty="0000000000000001"/>
+                    <ap:ComparisonCriteria ComparisonCriteria="urn:mindjet:LessThan" Dirty="0000000000000001"/>
+                </ap:TriggerGroup>
+                <ap:TriggerGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="lTdZXA7erkqJ0QpNPkaR/Q=="/>
+                    <ap:TriggerType TriggerType="urn:mindjet:TaskPercentage" Dirty="0000000000000001"/>
+                    <ap:ComparisonCriteria ComparisonCriteria="urn:mindjet:LessThan" Dirty="0000000000000001"/>
+                    <ap:Task TaskPercentage="100" Dirty="0000000000000001" TaskPriorityReadOnly="false" DurationReadOnly="false" StartDateReadOnly="false" DeadlineDateReadOnly="false" TaskPercentageReadOnly="false" ResourcesReadOnly="false" MilestoneReadOnly="false" EffortReadOnly="false"/>
+                </ap:TriggerGroup>
+            </ap:TriggersGroup>
+            <ap:EffectsGroup>
+                <ap:EffectGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="z8JnOQDmI0GnNnDdPNllFA=="/>
+                    <ap:EffectType EffectType="urn:mindjet:FillColor" Dirty="0000000000000000"/>
+                    <ap:Color Dirty="0000000000000001" FillColor="ffffcccc"/>
+                </ap:EffectGroup>
+                <ap:EffectGroup>
+                    <ap:Id Dirty="0000000000000001" Guid="uQ8+PP2XWE6D5dVeC3lSQg=="/>
+                    <ap:EffectType EffectType="urn:mindjet:TopicIcon" Dirty="0000000000000001"/>
+                    <ap:IconMarker Dirty="0000000000000001" Name="Alarm" UseStockIcon="true" StockIconType="urn:mindjet:Emergency"/>
+                </ap:EffectGroup>
+            </ap:EffectsGroup>
+        </ap:NamedRuleGroup>
+    </ap:ConditionalFormattingRulesGroup>
+</ap:Map>
