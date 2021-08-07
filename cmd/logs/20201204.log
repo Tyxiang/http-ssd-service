@@ -1,0 +1,28 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func1 (3 handlers)
+[GIN-debug] POST   /admin/*uri               --> main.post_admin (3 handlers)
+[GIN-debug] GET    /admin/*uri               --> main.get_admin (3 handlers)
+[GIN-debug] PUT    /admin/*uri               --> main.put (3 handlers)
+[GIN-debug] DELETE /admin/*uri               --> main.delete_admin (3 handlers)
+[GIN-debug] POST   /object/*uri              --> main.post_object (3 handlers)
+[GIN-debug] GET    /object/*uri              --> main.get_object (3 handlers)
+[GIN-debug] PUT    /object/*uri              --> main.put (3 handlers)
+[GIN-debug] DELETE /object/*uri              --> main.delete_object (3 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
+[GIN] 2020/12/04 - 21:23:37 | 404 |            0s |             ::1 | GET      "/restful/"
+[GIN] 2020/12/04 - 21:23:50 | 500 |            0s |             ::1 | GET      "/"
+[GIN-debug] redirecting request 301: /object/ --> /object/
+redis: nil
+[GIN] 2020/12/04 - 21:23:55 | 500 |       3.012ms |             ::1 | GET      "/object/"
+[GIN-debug] redirecting request 301: /admin/ --> /admin/
+redis: nil
+[GIN] 2020/12/04 - 21:24:00 | 500 |         997µs |             ::1 | GET      "/admin/"
+[GIN-debug] redirecting request 307: /admin/ --> /admin/
+[GIN] 2020/12/04 - 21:24:40 | 200 |       998.7µs |             ::1 | POST     "/admin/"
+[GIN-debug] redirecting request 301: /admin/ --> /admin/
+[GIN] 2020/12/04 - 21:24:43 | 200 |            0s |             ::1 | GET      "/admin/"
