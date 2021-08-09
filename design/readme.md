@@ -6,7 +6,7 @@
 
 ## 2. 脑图
 
-![map](image/map.png)
+![design-map](image/design-map.png)
 
 ## 3. 关键依赖
 
