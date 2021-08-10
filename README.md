@@ -21,11 +21,10 @@ This is an object that exists as a service. You can configure its properties and
 
 ## 4. 获取帮助 Get Help
 
-- 用户文档 Wiki
-- 参与讨论 Discussions 
+- 去 [Wiki](https://github.com/jialo-dev/http-object/wiki) 查看用户文档，寻找答案；
+- 去 [Discussions](https://github.com/jialo-dev/http-object/discussions) 发帖求助，参与讨论；
 
 ## 5. 支持我们 Support Us
 
-- 报告缺陷 Bug Report
-- 财务捐赠 Donate 
-- 贡献代码 Code Support
+- 通过 [Issue](https://github.com/jialo-dev/http-object/issues) 报告缺陷；
+- 非常欢迎您[贡献代码](https://github.com/jialo-dev/http-object/wiki)，一起改进和完善本项目；
