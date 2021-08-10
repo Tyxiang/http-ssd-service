@@ -1,4 +1,4 @@
-package Object
+package object
 
 import (
 	"errors"
@@ -11,7 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 	// "github.com/spf13/viper"
 
-	"Configs/"
+	// "Configs/"
 )
 
 var object string = "object"
