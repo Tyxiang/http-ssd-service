@@ -9,7 +9,7 @@ This is an object that exists as a service. You can configure its properties and
 ## 2. 特性 Features
 
 - 用 Go 语言开发；
-- 遵循 [HTTP 数据访问规则](https://github.com/jialo-dev/http-data-access-rule)；
+- 遵循 [HTTP 数据访问规则][1]；
 
 ## 3. 快速开始 Quick Start
 
@@ -21,10 +21,17 @@ This is an object that exists as a service. You can configure its properties and
 
 ## 4. 获取帮助 Get Help
 
-- 去 [Wiki](https://github.com/jialo-dev/http-object/wiki) 查看用户文档，寻找答案；
-- 去 [Discussions](https://github.com/jialo-dev/http-object/discussions) 发帖求助，参与讨论；
+- 去 [Wiki][2] 查看[用户手册][3]，寻找答案；
+- 去 [Discussions][6] 发帖求助，参与讨论；
 
 ## 5. 支持我们 Support Us
 
-- 通过 [Issue](https://github.com/jialo-dev/http-object/issues) 报告缺陷；
-- 非常欢迎您[贡献代码](https://github.com/jialo-dev/http-object/wiki)，一起改进和完善本项目；
+- 通过 [Issue][5] 报告缺陷；
+- 非常欢迎您贡献代码，请从阅读[开发入门][4]开始；
+
+[1]:https://github.com/jialo-dev/http-data-access-rule
+[2]:https://github.com/jialo-dev/http-object/wiki
+[3]:https://github.com/jialo-dev/http-object/wiki/user-manual
+[4]:https://github.com/jialo-dev/http-object/wiki/developer-getting-started
+[5]:https://github.com/jialo-dev/http-object/issues
+[6]:https://github.com/jialo-dev/http-object/discussions
