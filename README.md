@@ -19,7 +19,7 @@ This is an object that exists as a service. You can configure its properties and
 
 ### 3.3. 访问服务
 
-## 4. 获取帮助 Getting Help
+## 4. 获取帮助 Get Help
 
 - 用户文档 Wiki
 - 参与讨论 Discussions 
