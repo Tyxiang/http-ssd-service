@@ -2,11 +2,8 @@ package config
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"os"
-
-	"github.com/gin-gonic/gin"
 )
 
 type Config struct {
@@ -26,12 +23,20 @@ var currentConfigFileName = "current.json"
 func LoadDefault() error {
 	var err error
 	Values, err = read(configDir + defaultConfigFileName)
+	if err != nil {
+		// fmt.Println(err)
+		return err
+	}
 	return err
 }
 
 func LoadCurrent() error {
 	var err error
 	Values, err = read(configDir + currentConfigFileName)
+	if err != nil {
+		// fmt.Println(err)
+		return err
+	}
 	return err
 }
 
@@ -55,62 +60,24 @@ func read(configPath string) (c Config, err error) {
 	return c, err
 }
 
-func save(configPath string, c Config) (e error) {
+func save(configPath string, c Config) error {
 	configString, err := json.Marshal(c)
 	if err != nil {
 		// fmt.Println(err)
-		e = err
-		return
+		return err
 	}
 	err = ioutil.WriteFile(configPath, configString, 0644) //存在就覆盖；不存在创建。
 	if err != nil {
 		// fmt.Println(err)
-		e = err
-		return
+		return err
 	}
-	return e
+	return err
 }
 
-func Get(c *gin.Context) {
-	//uri := c.Param("uri")
-	//q := c.Query("q")
-	//s := c.Query("s")
-	c.JSON(200, gin.H{
-		"success": true,
-		"data":    Values,
-	})
+func Get() Config {
+	return Values
 }
 
-func Put(c *gin.Context) {
-	//uri := c.Param("uri")
-	configString, err := c.GetRawData()
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		c.JSON(500, gin.H{
-			"success": false,
-			"message": err.Error(),
-		})
-		return
-	}
-	err = json.Unmarshal([]byte(configString), &Values)
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		c.JSON(500, gin.H{
-			"success": false,
-			"message": err.Error(),
-		})
-		return
-	}
-	err = save(configDir+currentConfigFileName, Values)
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		c.JSON(500, gin.H{
-			"success": false,
-			"message": err.Error(),
-		})
-		return
-	}
-	c.JSON(200, gin.H{
-		"success": true,
-	})
+func Put() {
+
 }
