@@ -6,9 +6,4 @@ service start ...
  - using code:	gin.SetMode(gin.ReleaseMode)
 
 [GIN-debug] GET    /                         --> main.main.func1 (3 handlers)
-[GIN-debug] GET    /configs/*uri             --> http-object/internal/config.Get (3 handlers)
-[GIN-debug] PUT    /configs/*uri             --> http-object/internal/config.Put (3 handlers)
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-[GIN] 2021/08/11 - 15:02:26 | 500 |       592.9µs |             ::1 | GET      "/"
-[GIN-debug] redirecting request 301: /configs/ --> /configs/
-[GIN] 2021/08/11 - 15:02:34 | 200 |         918µs |             ::1 | GET      "/configs/"

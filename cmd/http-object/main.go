@@ -4,7 +4,6 @@ import (
 	// "errors"
 	"fmt"
 	"http-object/internal/config"
-	"http-object/internal/data"
 	"io"
 	"os"
 
@@ -22,9 +21,15 @@ func main() {
 	gin.DefaultWriter = io.MultiWriter(logFile, os.Stdout) // writer file and console
 	fmt.Fprintln(gin.DefaultWriter, "service start ... ")
 	//load config
-	data.Configs, err = config.Load()
+	err = config.LoadCurrent()
 	if err != nil {
 		fmt.Fprintln(gin.DefaultWriter, err.Error())
+		fmt.Fprintln(gin.DefaultWriter, "load default config")
+		err = config.LoadDefault()
+	}
+	if err != nil {
+		fmt.Fprintln(gin.DefaultWriter, err.Error())
+		panic(err)
 	}
 	// fmt.Printf("%+v", cfg) //打印结构体
 	//make router
@@ -37,11 +42,16 @@ func main() {
 		return
 	})
 
-	// router.POST("/configs/*uri", config.Post)
-	router.GET("/configs/*uri", config.Get)
-	router.PUT("/configs/*uri", config.Put)
-	// router.DELETE("/configs/*uri", config.Delete)
+	// router.GET("/configs/*uri", config.Get)
+	// router.PUT("/configs/*uri", config.Put)
 
+	// configs := router.Group("/configs")
+	// {
+	// 	configs.POST("/*uri", post_configs)
+	// 	configs.GET("/*uri", get_configs)
+	// 	configs.PUT("/*uri", put_configs)
+	// 	configs.DELETE("/*uri", delete_configs)
+	// }
 	// logs := router.Group("/logs")
 	// {
 	// 	logs.POST("/*uri", post_logs)
@@ -71,5 +81,15 @@ func main() {
 	// 	authns.DELETE("/*uri", delete_authns)
 	// }
 	//run router
-	router.Run(data.Configs.Service.Host + ":" + data.Configs.Service.Port)
+	router.Run(config.Values.Service.Host + ":" + config.Values.Service.Port)
 }
+
+// func get_configs(c *gin.Context) {
+// 	c.JSON(200, gin.H{
+// 		"success": true,
+// 		"data":    config.Configs,
+// 	})
+// }
+// func put_configs(c *gin.Context) {
+
+// }
