@@ -2,7 +2,7 @@ package main
 
 import (
 	// "errors"
-	"encoding/json"
+
 	"fmt"
 	"http-object/internal/config"
 	"io"
@@ -43,16 +43,16 @@ func main() {
 		return
 	})
 
-	router.GET("/configs/*uri", getConfig)
-	router.PUT("/configs/*uri", putConfig)
+	// router.GET("/configs/*uri", config.GET)
+	// router.PUT("/configs/*uri", config.PUT)
 
-	// configs := router.Group("/configs")
-	// {
-	// 	configs.POST("/*uri", post_configs)
-	// 	configs.GET("/*uri", get_configs)
-	// 	configs.PUT("/*uri", put_configs)
-	// 	configs.DELETE("/*uri", delete_configs)
-	// }
+	configs := router.Group("/configs")
+	{
+		//configs.POST("/*uri", post_configs)
+		configs.GET("/*uri", config.GET)
+		configs.PUT("/*uri", config.PUT)
+		//configs.DELETE("/*uri", delete_configs)
+	}
 	// logs := router.Group("/logs")
 	// {
 	// 	logs.POST("/*uri", post_logs)
@@ -85,44 +85,7 @@ func main() {
 	router.Run(config.Values.Service.Host + ":" + config.Values.Service.Port)
 }
 
-func getConfig(c *gin.Context) {
-	//uri := c.Param("uri")
-	//q := c.Query("q")
-	//s := c.Query("s")
-	c.JSON(200, gin.H{
-		"success": true,
-		"data":    config.Get(),
-	})
-}
-func putConfig(c *gin.Context) {
-	configString, err := c.GetRawData()
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		c.JSON(500, gin.H{
-			"success": false,
-			"message": err.Error(),
-		})
-		return
-	}
-	err = json.Unmarshal([]byte(configString), &Values)
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		c.JSON(500, gin.H{
-			"success": false,
-			"message": err.Error(),
-		})
-		return
-	}
-	err = save(configDir+currentConfigFileName, Values)
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		c.JSON(500, gin.H{
-			"success": false,
-			"message": err.Error(),
-		})
-		return
-	}
-	c.JSON(200, gin.H{
-		"success": true,
-	})
+// expression of object access
+func uriToReference(uri string, o Interface) {
+
 }

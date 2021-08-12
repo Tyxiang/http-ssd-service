@@ -20,26 +20,6 @@ var configDir = "configs/"
 var defaultConfigFileName = "default.json"
 var currentConfigFileName = "current.json"
 
-func LoadDefault() error {
-	var err error
-	Values, err = read(configDir + defaultConfigFileName)
-	if err != nil {
-		// fmt.Println(err)
-		return err
-	}
-	return err
-}
-
-func LoadCurrent() error {
-	var err error
-	Values, err = read(configDir + currentConfigFileName)
-	if err != nil {
-		// fmt.Println(err)
-		return err
-	}
-	return err
-}
-
 func read(configPath string) (c Config, err error) {
 	configFile, err := os.Open(configPath)
 	if err != nil {
@@ -74,10 +54,10 @@ func save(configPath string, c Config) error {
 	return err
 }
 
-func Get() Config {
+func get() Config {
 	return Values
 }
 
-func Put() {
+func put() {
 
 }
