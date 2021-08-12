@@ -1,14 +1,23 @@
 # HTTP Object
 
+这是一个万能服务。你可以通过它的 RESTful 接口，将其配置成任何你需要的服务。
+
+A universal service. You can set it to any service you need by RESTful interface.
+
 ## 1. 特性 Features
 
+- 先启动，然后决定它是什么；
+- 在线配置一切，包括：对象特性、运行参数等；
+- 小巧；
+- 高并发；
+- 无依赖；
+- 遵循 [HTTP 数据访问规则][1] 的 RESTful 接口；
+- 通过 Lua / Javascript 脚本构造方法；
 - 用 Go 语言开发；
-- 遵循 [HTTP 数据访问规则][1]；
-- 支持 Lua 脚本；
 
 ## 2. 快速开始 Quick Start
 
-### 2.1. 部署
+### 2.1. 启动
 
 - 下载
 - 运行
