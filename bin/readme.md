@@ -1,3 +1,3 @@
-# 说明
+# About
 
-这是编译后的可执行文件相关。
+This is the compiled executable file. 

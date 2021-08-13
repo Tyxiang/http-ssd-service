@@ -1,10 +1,10 @@
-# 说明
+# About
 
-## 1. 概述
+## 1. Overview 
 
-这是设计相关的资源。
+This is the resource about designing. 
 
-## 2. 程序结构 Program Structure 
+## 2. Program Structure 
 
 ```plantuml
 @startuml
@@ -17,28 +17,11 @@ ditaa
 @enduml
 ```
 
-## 3. 核心模块 Core Module 
-
-- rejson
-- object-service-core
-- object-service-core-rust
-
-## 4. 服务 Service
-
-- http-object-redisjson-go
-- http-object-redisjson-openresty
-- http-object
-- mqtt-object
-
-## 5. 接口 interface
+## 3. Mind Map
 
 ![design-map](image/design-map.png)
 
-## 数据文件
-
-## 项目布局
-
-## 6. 关键依赖
+## 4. 关键依赖
 
 - https://github.com/gin-gonic/gin
 - https://github.com/spf13/viper

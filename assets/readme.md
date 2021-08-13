@@ -1,3 +1,3 @@
-# 说明
+# About
 
-项目中使用的其他资源（图像，Logo等）。
+Other resources used in the project (images, logos, etc.). 

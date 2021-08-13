@@ -1,3 +1,3 @@
-# 说明
+# About
 
-这是功能测试相关资源。
+This is the resources about functional testing. 

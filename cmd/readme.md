@@ -1,3 +1,3 @@
-# 说明
+# About
 
-程序入口。每个目录对应一个可执行文件，名称名就是可执行文件的文件名。
+This is the program entry. Each directory corresponds to an executable file, and the name is the file name of the executable file. 

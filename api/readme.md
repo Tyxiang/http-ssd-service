@@ -1,5 +1,5 @@
-# 说明
+# About
 
-OpenAPI/Swagger 规范，JSON 模式文件，协议定义文件。
+OpenAPI/Swagger specification, JSON schema file, protocol definition file.
 
-示例：https://github.com/golang-standards/project-layout/blob/master/api/README.md
+Example: https://github.com/golang-standards/project-layout/blob/master/api/README.md 

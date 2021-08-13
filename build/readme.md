@@ -1,3 +1,3 @@
-# 说明
+# About
 
-编译相关资源。
+The resource about building.

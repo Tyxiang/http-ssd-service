@@ -1,3 +1,3 @@
-# 说明
+# About
 
-私有库。只能被父级、同级目录中的代码导入。
+This is the private package. It can only be imported by the code in the parent directory and the same level directory. 

@@ -1,3 +1,3 @@
-# 说明
+# About
 
-公开库。可被所有代码导入。
+This is the public library. Can be imported by all codes. 
