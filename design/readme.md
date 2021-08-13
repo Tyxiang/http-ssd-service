@@ -9,11 +9,11 @@ This is the resource about designing.
 ```plantuml
 @startuml
 ditaa
-+---------------------------------------------------------+
-|                  interface / log / ...                  | framework
-+---------------------------------------------------------+
-| config / authn / attribute / method / persistence / ... | core
-+---------------------------------------------------------+
++--------------------------------------------+
+|            interface / log / ...           | framework
++--------------------------------------------+
+| config / script / data / persistence / ... | core
++--------------------------------------------+
 @enduml
 ```
 
