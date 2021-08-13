@@ -6,8 +6,8 @@ A universal service. You can set it to any service you need by the RESTful inter
 
 - Designed for quickly build micro service;
 - Run first, and then decide what it is;
-- Set object properties and methods through the RESTful interface;
-- Actually, do everything through the RESTful interface, including: config/authn/object/script/persistence/log, etc;
+- Set object attributes and methods through the RESTful interface;
+- Actually, do everything through the RESTful interface, including: authn/config/attribut/method/persistence/log, etc;
 - The RESTful interface follow [HTTP Data Access Rule][r];
 - Drive method by Lua script;
 - Developed in Golang, small, high concurrency and no dependence;
