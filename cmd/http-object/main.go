@@ -4,9 +4,12 @@ import (
 	// "errors"
 
 	"fmt"
-	"http-object/internal/config"
 	"io"
 	"os"
+
+	//"http-object/internal/router"
+
+	"github.com/jialo-dev/object-service-core/pkg/config"
 
 	"github.com/gin-gonic/gin"
 )
@@ -49,8 +52,8 @@ func main() {
 	configs := router.Group("/configs")
 	{
 		//configs.POST("/*uri", post_configs)
-		configs.GET("/*uri", config.GET)
-		configs.PUT("/*uri", config.PUT)
+		configs.GET("/*uri", router.GET)
+		configs.PUT("/*uri", router.PUT)
 		//configs.DELETE("/*uri", delete_configs)
 	}
 	// logs := router.Group("/logs")

@@ -6,8 +6,10 @@ A universal service. You can set it to any service you need by the http interfac
 
 - Designed for quickly build micro service;
 - Run first, and then decide what it is;
+- Help the front and back ends to be truly separated; 
+- Front-end definition service; 
 - Do everything through the http interface, including: config/attribut/persistence/log, etc;
-- Set object attributes through the http interface by yaml;
+- Define attributes with semi-structured data, like json, yaml, xml, etc;
 - Use standard http methods (POST/GET/PUT/DELETE, etc.) as object methods;
 - The http interface follow [HTTP Data Access Rule][r];
 - Drive method by Lua script;
