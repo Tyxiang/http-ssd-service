@@ -1,18 +1,20 @@
-# HTTP Object
+# HTTP Semi-Structured Data Service
 
-A universal service. You can set it to any service you need by the http interface.
+> http-ssd-service
+
+A universal http service, its interface definition is also completed through the HTTP.
 
 ## 1. Features
 
 - Designed for quickly build micro service;
 - Run first, and then decide what it is;
-- Help the front and back ends to be truly separated; 
-- Front-end definition service; 
-- Do everything through the http interface, including: config/attribut/persistence/log, etc;
-- Define attributes with semi-structured data, like json, yaml, xml, etc;
-- Use standard http methods (POST/GET/PUT/DELETE, etc.) as object methods;
-- The http interface follow [HTTP Data Access Rule][r];
-- Drive method by Lua script;
+- Do everything through the http interface, including interface definition;
+- Define data structure with semi-structured data, like json, yaml, xml, etc;
+- Use standard http methods (POST/GET/PUT/DELETE) to access data;
+- Access rules follow [HTTP Data Access Rule][r];
+- Use lua script described interaction between data;
+- Help the front and back ends to be truly separated;
+- Front-end definition service;
 - Developed in Golang, small, high concurrency and no dependence;
 
 ## 2. Quick Start
