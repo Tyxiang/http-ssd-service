@@ -12,7 +12,7 @@ ditaa
 +--------------------------------------------+
 |            interface / log / ...           | framework
 +--------------------------------------------+
-| config / script / data / persistence / ... | core
+| config / script / data / persistence / ... | engine
 +--------------------------------------------+
 @enduml
 ```
