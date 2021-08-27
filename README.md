@@ -42,15 +42,3 @@ A universal http service, its interface definition is also completed through the
 [w3]: https://github.com/jialo-dev/http-object/wiki/developer-getting-started
 [i]: https://github.com/jialo-dev/http-object/issues
 [d]: https://github.com/jialo-dev/http-object/discussions
-
-<!--
-
-## 5. 概述 Overview
-
-这是一个作为服务存在的对象，您可以：
-
-- 用 http 方式配置它的属性和方法，使其成为您需要的任何服务。
-- 用 http 方式消费服务。
-
-This is an object that exists as a service. You can configure its properties and methods in a http way to make it any service you need.
--->
