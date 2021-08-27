@@ -1,6 +1,6 @@
 # HTTP Semi-Structured Data Service
 
-A universal http service, its interface definition is also completed through the HTTP.
+A universal http service, its interface definition is also completed through the http. In other words, you can run the service first and then decide what it is.
 
 ## 1. Features
 
