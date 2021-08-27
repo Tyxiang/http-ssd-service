@@ -1,7 +1,5 @@
 # HTTP Semi-Structured Data Service
 
-> http-ssd-service
-
 A universal http service, its interface definition is also completed through the HTTP.
 
 ## 1. Features
