@@ -1,0 +1,17 @@
+service start ... 
+load last config
+load default config
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func1 (3 handlers)
+[GIN-debug] GET    /configs/*uri             --> main.get_configs (3 handlers)
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:8000
+[GIN] 2021/10/10 - 22:18:03 | 200 |       153.2µs |       127.0.0.1 | GET      "/configs/"
+[GIN] 2021/10/10 - 22:18:10 | 200 |       893.1µs |       127.0.0.1 | GET      "/configs/data"
+[GIN] 2021/10/10 - 22:18:21 | 200 |            0s |       127.0.0.1 | GET      "/configs/data/array"
+[GIN] 2021/10/10 - 22:18:26 | 200 |       518.8µs |       127.0.0.1 | GET      "/configs/data/object"
+[GIN] 2021/10/10 - 22:18:39 | 200 |            0s |       127.0.0.1 | GET      "/configs/data/object/a"

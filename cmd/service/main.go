@@ -5,18 +5,27 @@ import (
 
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
+	"strings"
 
 	//"http-object/internal/router"
-
-	"github.com/jialo-dev/object-service-core/pkg/config"
-
+	//"github.com/tidwall/sjson"
+	//"github.com/tidwall/gjson"
 	"github.com/gin-gonic/gin"
+	"github.com/tidwall/gjson"
 )
 
+var configBytes []byte
+
 func main() {
+	//dirs
+	configDir := "configs/"
+	logDir := "logs/"
+	// persistenceDir := "persistences/"
+	// script := "script/"
 	//init log
-	logFilePath := "logs/current.log"
+	logFilePath := logDir + "last.log"
 	logFile, err := os.Create(logFilePath)
 	if err != nil {
 		fmt.Println(err)
@@ -25,36 +34,42 @@ func main() {
 	gin.DefaultWriter = io.MultiWriter(logFile, os.Stdout) // writer file and console
 	fmt.Fprintln(gin.DefaultWriter, "service start ... ")
 	//load config
-	err = config.LoadCurrent()
+	fmt.Fprintln(gin.DefaultWriter, "load last config")
+	configFilePath := configDir + "last.json"
+	configBytes, err = ioutil.ReadFile(configFilePath)
 	if err != nil {
 		fmt.Fprintln(gin.DefaultWriter, err.Error())
+		return
+	}
+	if !gjson.Valid(string(configBytes)) {
 		fmt.Fprintln(gin.DefaultWriter, "load default config")
-		err = config.LoadDefault()
+		configFilePath = configDir + "default.json"
+		configBytes, err = ioutil.ReadFile(configFilePath)
+		if err != nil {
+			fmt.Fprintln(gin.DefaultWriter, err.Error())
+			panic(err)
+		}
 	}
-	if err != nil {
-		fmt.Fprintln(gin.DefaultWriter, err.Error())
-		panic(err)
-	}
-	// fmt.Printf("%+v", cfg) //打印结构体
+	//fmt.Println(string(configBytes))
 	//make router
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
+		name := gjson.GetBytes(configBytes, "name")
+		if err != nil {
+			fmt.Fprintln(gin.DefaultWriter, err.Error())
+			return
+		}
 		c.JSON(500, gin.H{
 			"success": true,
-			"name":    "http object service",
+			"name":    name.String(),
 		})
-		return
 	})
-
-	// router.GET("/configs/*uri", config.GET)
-	// router.PUT("/configs/*uri", config.PUT)
-
 	configs := router.Group("/configs")
 	{
-		//configs.POST("/*uri", post_configs)
-		configs.GET("/*uri", router.GET)
-		configs.PUT("/*uri", router.PUT)
-		//configs.DELETE("/*uri", delete_configs)
+		// configs.POST("/*uri", post_configs)
+		configs.GET("/*uri", get_configs)
+		// configs.PUT("/*uri", router.PUT)
+		// configs.DELETE("/*uri", delete_configs)
 	}
 	// logs := router.Group("/logs")
 	// {
@@ -84,11 +99,36 @@ func main() {
 	// 	authns.PUT("/*uri", put_authns)
 	// 	authns.DELETE("/*uri", delete_authns)
 	// }
+
 	//run router
-	router.Run(config.Values.Service.Host + ":" + config.Values.Service.Port)
+	host := gjson.GetBytes(configBytes, "host").String()
+	port := gjson.GetBytes(configBytes, "port").String()
+	router.Run(host + ":" + port)
 }
 
-// expression of object access
-func uriToReference(uri string, o Interface) {
+func get_configs(c *gin.Context) {
+	uri := c.Param("uri")
+	//q := c.Query("q")
+	//s := c.Query("s")
+	//path := uri_to_path(uri)
+	var value interface{}
+	if uri == "/" {
+		value = gjson.ParseBytes(configBytes).Value()
+	} else {
+		path := uri_to_path(uri)
+		value = gjson.GetBytes(configBytes, path).Value()
+	}
+	c.JSON(200, gin.H{
+		"success": true,
+		"data":    value,
+	})
+}
 
+func uri_to_path(uri string) string {
+	path_1 := strings.Trim(uri, "/")
+	path_2 := strings.Replace(path_1, "/", ".", -1)
+	path_3 := strings.Replace(path_2, "(", ".", -1)
+	path := strings.Replace(path_3, ")", "", -1)
+	//fmt.Println(path)
+	return path
 }

@@ -4,17 +4,11 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"os"
+		//"github.com/tidwall/sjson"
+	//"github.com/tidwall/gjson"
 )
 
-type Config struct {
-	Service struct {
-		Name string `json:"name"`
-		Host string `json:"host"`
-		Port string `json:"port"`
-	} `json:"service"`
-}
-
-var Values Config
+var Config
 
 var configDir = "configs/"
 var defaultConfigFileName = "default.json"
