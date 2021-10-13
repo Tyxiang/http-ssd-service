@@ -4,6 +4,7 @@ import (
 	"http-ssd-service/pkg/config"
 	"http-ssd-service/pkg/handler"
 	"http-ssd-service/pkg/log"
+	"http-ssd-service/pkg/persistence"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -21,6 +22,15 @@ func main() {
 	if err != nil {
 		log.Save("warn", err)
 		err = config.Load("default")
+	}
+	if err != nil {
+		log.Save("panic", err)
+	}
+	////load persistence
+	err = persistence.Load("last")
+	if err != nil {
+		log.Save("warn", err)
+		err = persistence.Load("default")
 	}
 	if err != nil {
 		log.Save("panic", err)
@@ -51,6 +61,11 @@ func main() {
 	sys.Get("/logs/:name", handler.GetLog)
 	sys.Delete("/logs/:name", handler.DeleteLog)
 	//////persistences
+	sys.Post("/persistences", handler.PostPersistences)
+	sys.Get("/persistences", handler.GetPersistences)
+	sys.Get("/persistences/:name", handler.GetPersistence)
+	sys.Put("/persistences/:name", handler.PutPersistence)
+	sys.Delete("/persistences/:name", handler.DeletePersistence)
 	//////scripts
 	////sys-listen
 	sysHost, _ := config.Get("system.host")
