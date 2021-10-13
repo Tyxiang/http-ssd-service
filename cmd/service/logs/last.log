@@ -1,14 +1,20 @@
-service start ... 
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] GET    /system/configs           --> main.main.func1 (3 handlers)
-[GIN-debug] GET    /system/configs/*uri      --> main.main.func2 (3 handlers)
-[GIN-debug] PUT    /system/configs/:name     --> main.main.func3 (3 handlers)
-[GIN-debug] DELETE /system/configs/:name     --> main.main.func4 (3 handlers)
-[GIN-debug] Listening and serving HTTP on 127.0.0.1:8000
-[GIN] 2021/10/11 - 21:21:14 | 404 |            0s |       127.0.0.1 | GET      "/system"
-[GIN] 2021/10/11 - 21:21:20 | 404 |            0s |       127.0.0.1 | GET      "/system/"
+time="2021-10-13T18:36:44+08:00" level=info msg="service start ... "
+time="2021-10-13T18:36:44+08:00" level=info msg="system cors on"
+time="2021-10-13T18:36:44+08:00" level=info msg="ssd cors on"
+time="2021-10-13T19:55:44+08:00" level=info msg="service start ... "
+time="2021-10-13T19:55:44+08:00" level=info msg="system cors on"
+time="2021-10-13T19:55:44+08:00" level=info msg="ssd cors on"
+time="2021-10-13T19:57:19+08:00" level=trace msg="not exist"
+time="2021-10-13T21:20:25+08:00" level=info msg="service start ... "
+time="2021-10-13T21:20:25+08:00" level=warning msg="failed to load last"
+time="2021-10-13T21:20:25+08:00" level=info msg="system cors on"
+time="2021-10-13T21:20:25+08:00" level=info msg="ssd cors on"
+time="2021-10-13T21:20:29+08:00" level=info msg="service start ... "
+time="2021-10-13T21:20:29+08:00" level=warning msg="failed to load last"
+time="2021-10-13T21:20:29+08:00" level=info msg="system cors on"
+time="2021-10-13T21:20:29+08:00" level=info msg="ssd cors on"
+time="2021-10-13T21:25:06+08:00" level=info msg="service start ... "
+time="2021-10-13T21:25:06+08:00" level=warning msg="failed to load last"
+time="2021-10-13T21:25:06+08:00" level=info msg="system cors on"
+time="2021-10-13T21:25:06+08:00" level=info msg="ssd cors on"
+time="2021-10-13T21:26:05+08:00" level=trace msg="not exist"

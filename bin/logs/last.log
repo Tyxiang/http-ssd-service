@@ -12,3 +12,4 @@ service start ...
 [GIN-debug] Listening and serving HTTP on 127.0.0.1:8000
 [GIN] 2021/10/11 - 21:21:14 | 404 |            0s |       127.0.0.1 | GET      "/system"
 [GIN] 2021/10/11 - 21:21:20 | 404 |            0s |       127.0.0.1 | GET      "/system/"
+time="2021-10-13T18:17:29+08:00" level=info msg="service start ... "

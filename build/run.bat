@@ -1,3 +1,2 @@
-cd ../cmd/
-go run main.go
+go run ../cmd/service/main.go
 pause
