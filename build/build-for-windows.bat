@@ -1,5 +1,2 @@
-cd ../cmd
-gofmt -w ./
-cd ../bin
-go build ../cmd/main.go
+go build -o ../bin/service.exe ../cmd/service/main.go 
 pause

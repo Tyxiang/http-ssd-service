@@ -1,9 +1,15 @@
 {
-    "name": "http ssd service",
+  "name": "http ssd service",
+  "system": {
+    "host": "127.0.0.1",
+    "port": "8000",
+    "cors": false
+  },
+  "ssd": {
     "host": "127.0.0.1",
     "port": "8080",
-    "data": {
-      "array": [1,2,3],
-      "object": { "a": 1, "b": 2, "c": 3 }
-    }
-  }
+    "cors": true,
+    "level": 0
+  },
+  "test": { "a": q, q: q, c: c }
+}

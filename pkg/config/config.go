@@ -1,48 +1,61 @@
 package config
 
 import (
+	"errors"
 	"io/ioutil"
 	"os"
 	"strings"
 
 	"github.com/tidwall/gjson"
+	"github.com/tidwall/sjson"
 )
 
-var configBytes []byte
+var bufferBytes []byte
 var dir = "configs/"
 
-// file
-func Load(n string) (err error) {
-	path := dir + n + ".json"
-	configBytes, err = ioutil.ReadFile(path)
-	if !gjson.Valid(string(configBytes)) {
+//// file
+func Load(name string) (err error) {
+	path := dir + name + ".json"
+	bufferBytes, err = ioutil.ReadFile(path)
+	if err != nil {
+		return err
+	}
+	if !gjson.Valid(string(bufferBytes)) {
+		err = errors.New("failed to load " + name)
 		return err
 	}
 	return nil
 }
-
-func List() (f []string, err error) {
+func Save() (err error) {
+	//name := time.Now().Format("2006-01-02T15-04-05")
+	name := "last"
+	path := dir + name + ".json"
+	err = ioutil.WriteFile(path, bufferBytes, 0666)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func List() (names []string, err error) {
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
 		return nil, err
 	}
 	for _, file := range files {
-		f = append(f, strings.TrimRight(file.Name(), ".json"))
+		names = append(names, strings.TrimRight(file.Name(), ".json"))
 	}
-	return f, nil
+	return names, nil
 }
-
-func New(n string, d []byte) (err error) {
-	path := dir + n + ".json"
-	err = ioutil.WriteFile(path, d, 0644) //存在就覆盖；不存在创建。
+func New(name string, data []byte) (err error) {
+	path := dir + name + ".json"
+	err = ioutil.WriteFile(path, data, 0644) //存在就覆盖；不存在创建。
 	if err != nil {
 		return err
 	}
 	return nil
 }
-
-func Remove(n string) (err error) {
-	path := dir + n + ".json"
+func Remove(name string) (err error) {
+	path := dir + name + ".json"
 	err = os.Remove(path)
 	if err != nil {
 		return err
@@ -50,59 +63,75 @@ func Remove(n string) (err error) {
 	return nil
 }
 
-func Save(n string) {
-
-}
-
-// data
-func Add(u string) (err error) {
-	return
-}
-
-func Get(p string) (r interface{}) {
-	//r = gjson.ParseBytes(configBytes).Value()
-	if p == "" {
-		p = "@this"
+//// data
+func Add(path string, data []byte) (err error) {
+	if path == "" {
+		if gjson.GetBytes(bufferBytes, "@this").Exists() {
+			err = errors.New("already exist")
+			return err
+		}
+		bufferBytes = data
 	}
-	r = gjson.GetBytes(configBytes, p).Value()
-	return r
+	if path != "" {
+		if gjson.GetBytes(bufferBytes, path).Exists() {
+			err = errors.New("already exist")
+			return err
+		}
+		bufferBytes, err = sjson.SetRawBytes(bufferBytes, path, data)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
-
-func Set(u string, d interface{}) (err error) {
-	return
+func Get(path string) (data interface{}, err error) {
+	if path == "" {
+		path = "@this"
+	}
+	data = gjson.GetBytes(bufferBytes, path).Value()
+	if data == nil {
+		err = errors.New("not exist")
+		return nil, err
+	}
+	return data, nil
 }
-
-func Del(u string) (err error) {
-	return
+func Set(path string, data []byte) (err error) {
+	if path == "" {
+		if !gjson.GetBytes(bufferBytes, "@this").Exists() {
+			err = errors.New("not exist")
+			return err
+		}
+		bufferBytes = data
+	}
+	if path != "" {
+		if !gjson.GetBytes(bufferBytes, path).Exists() {
+			err = errors.New("not exist")
+			return err
+		}
+		bufferBytes, err = sjson.SetRawBytes(bufferBytes, path, data)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
-
-// func read(path string) (c []byte, err error) {
-// 	c, err = ioutil.ReadFile(path)
-// 	if err != nil {
-// 		return
-// 	}
-// 	if !gjson.Valid(string(configBytes)) {
-// 		fmt.Fprintln(gin.DefaultWriter, "load default config")
-// 		configFilePath = configDir + "default.json"
-// 		configBytes, err = ioutil.ReadFile(configFilePath)
-// 		if err != nil {
-// 			fmt.Fprintln(gin.DefaultWriter, err.Error())
-// 			panic(err)
-// 		}
-// 	}
-// 	return c, err
-// }
-
-// func save(configPath string, c Config) error {
-// 	configString, err := json.Marshal(c)
-// 	if err != nil {
-// 		// fmt.Println(err)
-// 		return err
-// 	}
-// 	err = ioutil.WriteFile(configPath, configString, 0644) //存在就覆盖；不存在创建。
-// 	if err != nil {
-// 		// fmt.Println(err)
-// 		return err
-// 	}
-// 	return err
-// }
+func Del(path string) (err error) {
+	if path == "" {
+		if !gjson.GetBytes(bufferBytes, "@this").Exists() {
+			err = errors.New("not exist")
+			return err
+		}
+		bufferBytes = nil
+	}
+	if path != "" {
+		if !gjson.GetBytes(bufferBytes, path).Exists() {
+			err = errors.New("not exist")
+			return err
+		}
+		bufferBytes, err = sjson.DeleteBytes(bufferBytes, path)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+}

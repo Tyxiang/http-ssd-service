@@ -1,0 +1,16 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func1 (3 handlers)
+[GIN-debug] POST   /admin/*uri               --> main.post_admin (3 handlers)
+[GIN-debug] GET    /admin/*uri               --> main.get_admin (3 handlers)
+[GIN-debug] PUT    /admin/*uri               --> main.put (3 handlers)
+[GIN-debug] DELETE /admin/*uri               --> main.delete_admin (3 handlers)
+[GIN-debug] POST   /object/*uri              --> main.post_object (3 handlers)
+[GIN-debug] GET    /object/*uri              --> main.get_object (3 handlers)
+[GIN-debug] PUT    /object/*uri              --> main.put (3 handlers)
+[GIN-debug] DELETE /object/*uri              --> main.delete_object (3 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
