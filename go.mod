@@ -9,4 +9,5 @@ require (
 	github.com/spf13/viper v1.8.1
 	github.com/tidwall/gjson v1.9.3 // indirect
 	github.com/tidwall/sjson v1.2.2 // indirect
+	github.com/valyala/fastjson v1.6.3 // indirect
 )

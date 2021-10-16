@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "tyx",
+      "age": 40,
+      "phone": "18611665178",
+      "email": "en1434@163.com"
+    },
+    {
+      "name": "cc",
+      "age": 30,
+      "phone": "18677668188",
+      "email": "cc@163.com"
+    },
+    {
+      "name": "lht",
+      "age": 40,
+      "phone": "13679436656",
+      "email": "lht@163.com"
+    }
+  ]
+}

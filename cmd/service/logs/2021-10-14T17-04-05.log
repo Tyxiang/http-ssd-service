@@ -1,0 +1,5 @@
+time="2021-10-14T17:04:05+08:00" level=info msg="service start ... "
+time="2021-10-14T17:04:05+08:00" level=warning msg="last config file format error"
+time="2021-10-14T17:04:05+08:00" level=info msg="load default config"
+time="2021-10-14T17:04:05+08:00" level=warning msg="open persistences/last.json: The system cannot find the file specified."
+time="2021-10-14T17:04:05+08:00" level=info msg="load default persistence"

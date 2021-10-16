@@ -9,7 +9,7 @@ import (
 func GetLogs(c *fiber.Ctx) error {
 	list, err := log.List()
 	if err != nil {
-		log.Save("trace", err)
+		log.Trace(err)
 		return c.Status(400).JSON(&fiber.Map{
 			"success": false,
 			"message": err.Error(),
@@ -24,7 +24,7 @@ func GetLog(c *fiber.Ctx) error {
 	name := c.Params("name")
 	data, err := log.Read(name)
 	if err != nil {
-		log.Save("trace", err)
+		log.Trace(err)
 		return c.Status(400).JSON(&fiber.Map{
 			"success": false,
 			"message": err.Error(),
@@ -36,7 +36,7 @@ func DeleteLog(c *fiber.Ctx) error {
 	name := c.Params("name")
 	err := log.Remove(name)
 	if err != nil {
-		log.Save("trace", err)
+		log.Trace(err)
 		return c.Status(400).JSON(&fiber.Map{
 			"success": false,
 			"message": err.Error(),

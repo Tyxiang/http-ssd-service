@@ -1,10 +1,11 @@
 package main
 
 import (
+	"errors"
 	"http-ssd-service/pkg/config"
 	"http-ssd-service/pkg/handler"
 	"http-ssd-service/pkg/log"
-	"http-ssd-service/pkg/persistence"
+	"http-ssd-service/pkg/ssd"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -12,85 +13,91 @@ import (
 )
 
 func main() {
-	err := log.Init()
+	// load config
+	var earlyErr error // for early err before log init
+	err := config.Load("last")
 	if err != nil {
-		panic(err)
-	}
-	log.Save("info", "service start ... ") //trace debug info warn error fatal panic
-	////load config
-	err = config.Load("last")
-	if err != nil {
-		log.Save("warn", err)
+		earlyErr = err
 		err = config.Load("default")
 	}
 	if err != nil {
-		log.Save("panic", err)
+		// default config file lost
+		panic(err)
 	}
-	////load persistence
-	err = persistence.Load("last")
+	// init log
+	log.Dir = config.Pick("log.dir").String()
+	err = log.Init(config.Pick("log.level").String())
 	if err != nil {
-		log.Save("warn", err)
-		err = persistence.Load("default")
+		panic(err)
+	}
+	// save early log
+	log.Info("service start ... ")
+	if earlyErr != nil {
+		log.Warn(earlyErr) //trace debug info warn error fatal panic
+		log.Info(errors.New("load default config"))
+	}
+	// load ssd
+	ssd.Dir = config.Pick("ssd.dir").String()
+	err = ssd.Load("last")
+	if err != nil {
+		// last ssd file lost
+		log.Warn(err)
+		log.Info(errors.New("load default ssd"))
+		err = ssd.Load("default")
 	}
 	if err != nil {
-		log.Save("panic", err)
+		// default ssd file lost
+		log.Panic(err)
 	}
-	////sys
+
+	// sys
 	sys := fiber.New()
 	sys.Use(logger.New())
-	sysCors, _ := config.Get("system.cors")
-	if sysCors == true {
-		log.Save("info", "system cors on")
+	if config.Pick("service.system.cors").Bool() == true {
+		log.Info("system cors on")
 		sys.Use(cors.New())
 	}
-	////sys-router
+	// sys-router
 	sys.Get("/", func(c *fiber.Ctx) error {
-		data := []string{"configs", "logs", "persistences", "scripts"}
+		data := []string{"config", "logs", "ssds", "scripts"}
 		return c.JSON(&fiber.Map{
 			"success": true,
 			"data":    data,
 		})
 	})
-	//////configs
-	sys.Post("/configs/*", handler.PostConfigs)
-	sys.Get("/configs/*", handler.GetConfigs)
-	sys.Put("/configs/*", handler.PutConfigs)
-	sys.Delete("/configs/*", handler.DeleteConfigs)
-	//////logs
+	//// configs
+	sys.Post("/config/*", handler.PostConfig)
+	sys.Get("/config/*", handler.GetConfig)
+	sys.Put("/config/*", handler.PutConfig)
+	sys.Delete("/config/*", handler.DeleteConfig)
+	//// logs
 	sys.Get("/logs", handler.GetLogs)
 	sys.Get("/logs/:name", handler.GetLog)
 	sys.Delete("/logs/:name", handler.DeleteLog)
-	//////persistences
-	sys.Post("/persistences", handler.PostPersistences)
-	sys.Get("/persistences", handler.GetPersistences)
-	sys.Get("/persistences/:name", handler.GetPersistence)
-	sys.Put("/persistences/:name", handler.PutPersistence)
-	sys.Delete("/persistences/:name", handler.DeletePersistence)
-	//////scripts
-	////sys-listen
-	sysHost, _ := config.Get("system.host")
-	sysPort, _ := config.Get("system.port")
+	//// ssds
+	sys.Post("/ssds", handler.PostSsds)
+	sys.Get("/ssds", handler.GetSsds)
+	sys.Get("/ssds/:name", handler.GetSsd)
+	sys.Put("/ssds/:name", handler.PutSsd)
+	sys.Delete("/ssds/:name", handler.DeleteSsd)
+	//// scripts
+	// sys-listen
 	go func() {
-		log.Save("fatal", sys.Listen(sysHost.(string)+":"+sysPort.(string)))
+		log.Fatal(sys.Listen(config.Pick("service.system.host").String() + ":" + config.Pick("service.system.port").String()))
 	}()
 
-	////ssd
+	// ssd
 	ssd := fiber.New()
 	ssd.Use(logger.New())
-	ssdCors, _ := config.Get("system.cors")
-	if ssdCors == true {
-		log.Save("info", "ssd cors on")
+	if config.Pick("service.system.cors").Bool() == true {
+		log.Info("ssd cors on")
 		ssd.Use(cors.New())
 	}
-	////ssd-router
-	ssd.Get("/*", func(c *fiber.Ctx) error {
-		return c.JSON(&fiber.Map{
-			"success": true,
-			"data":    "ssd",
-		})
-	})
-	////ssd-listen
-	ssdHost, _ := config.Get("ssd.host")
-	ssdPort, _ := config.Get("ssd.port")
-	log.Save("fatal", ssd.Listen(ssdHost.(string)+":"+ssdPort.(string)))
+	// ssd-router
+	ssd.Post("/*", handler.PostSsd)
+	ssd.Get("/*", handler.GetSsd)
+	ssd.Put("/*", handler.PutSsd)
+	ssd.Delete("/*", handler.DeleteSsd)
+	// ssd-listen
+	log.Fatal(ssd.Listen(config.Pick("service.ssd.host").String() + ":" + config.Pick("service.ssd.port").String()))
 }
