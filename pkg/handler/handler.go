@@ -17,7 +17,7 @@ func uri_to_path(uri string) string {
 	return path
 }
 
-func validJson(data []byte) (err error) {
+func validJson(data []byte) error {
 	//err := fastjson.ValidateBytes(data)
 	if !gjson.Valid(string(data)) {
 		err := errors.New("wrong data type")

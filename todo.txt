@@ -1,1 +1,0 @@
-- config 用 init 处理 last 和 default，没有 last 时的消息传不出来

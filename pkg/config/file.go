@@ -9,8 +9,9 @@ import (
 )
 
 // load a config file
-func Load(name string) (err error) {
+func Load(name string) error {
 	path := Dir + name + ".json"
+	var err error
 	bufferBytes, err = ioutil.ReadFile(path)
 	if err != nil {
 		return err
@@ -24,10 +25,10 @@ func Load(name string) (err error) {
 }
 
 // save current config to json file
-func Save() (err error) {
+func Save() error {
 	name := "last"
 	path := Dir + name + ".json"
-	err = ioutil.WriteFile(path, bufferBytes, 0666) //存在就覆盖；不存在创建。
+	err := ioutil.WriteFile(path, bufferBytes, 0666) //存在就覆盖；不存在创建。
 	if err != nil {
 		return err
 	}
@@ -35,31 +36,34 @@ func Save() (err error) {
 }
 
 // list json files in config file dir
-func List() (names []string, err error) {
+func List() ([]string, error) {
 	files, err := ioutil.ReadDir(Dir)
 	if err != nil {
 		return nil, err
 	}
+	name := ""
+	names := []string{}
 	for _, file := range files {
-		name := strings.TrimRight(file.Name(), ".json")
+		name = strings.TrimRight(file.Name(), ".json")
 		names = append(names, name)
 	}
 	return names, nil
 }
 
-// new a json config file
-// func New(name string, data []byte) (err error) {
+// //new a json config file
+// func New(name string, data []byte) error {
 // 	path := Dir + name + ".json"
-// 	err = ioutil.WriteFile(path, data, 0644) //存在就覆盖；不存在创建。
+// 	err := ioutil.WriteFile(path, data, 0644) //存在就覆盖；不存在创建。
 // 	if err != nil {
 // 		return err
 // 	}
 // 	return nil
 // }
-// delete a json config file
-// func Remove(name string) (err error) {
+
+// //delete a json config file
+// func Remove(name string) error {
 // 	path := Dir + name + ".json"
-// 	err = os.Remove(path)
+// 	err := os.Remove(path)
 // 	if err != nil {
 // 		return err
 // 	}

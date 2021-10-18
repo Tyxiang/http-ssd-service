@@ -8,6 +8,7 @@ import (
 	"http-ssd-service/pkg/log"
 	"http-ssd-service/pkg/ssd"
 	"os"
+	"time"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -15,11 +16,12 @@ import (
 )
 
 func main() {
+	// sys ////////////////////////////////////////////////////////////////////
 	// init config
 	config.Dir = "configs/"
 	err := config.Init()
 	if err != nil {
-		//panic(err)
+		// panic(err)
 		fmt.Println("failed to init config, program exit")
 		os.Exit(1)
 	}
@@ -28,7 +30,7 @@ func main() {
 	log.Level = config.Pick("log.level").String()
 	err = log.Init()
 	if err != nil {
-		//panic(err)
+		// panic(err)
 		fmt.Println("failed to init log, program exit")
 		os.Exit(1)
 	}
@@ -38,25 +40,18 @@ func main() {
 		log.Warn(config.Warn)
 		log.Info(errors.New("load default config"))
 	}
-	// load ssd
-	ssd.Dir = config.Pick("ssd.dir").String()
-	err = ssd.Init()
-	if err != nil {
-		log.Panic(err)
-	}
-	// save ssd warn log
-	if ssd.Warn != nil {
-		log.Warn(ssd.Warn)
-		log.Info(errors.New("load default ssd"))
-	}
-	// sys
-	sys := fiber.New()
+	// sys-service
+	sys := fiber.New(fiber.Config{
+		ServerHeader: "http-ssd-service",
+		AppName:      "HTTP SSD Service (System)",
+	})
 	sys.Use(logger.New()) // http log to console
 	if config.Pick("service.system.cors").Bool() {
 		log.Info("system cors on")
 		sys.Use(cors.New())
 	}
 	// sys-router
+	//// root
 	sys.Get("/", func(c *fiber.Ctx) error {
 		data := []string{"config", "logs", "ssds", "scripts"}
 		return c.JSON(&fiber.Map{
@@ -64,7 +59,7 @@ func main() {
 			"data":    data,
 		})
 	})
-	//// configs
+	//// config
 	sys.Post("/config/*", handler.PostConfig)
 	sys.Get("/config/*", handler.GetConfig)
 	sys.Put("/config/*", handler.PutConfig)
@@ -81,16 +76,30 @@ func main() {
 	sys.Delete("/ssds/:name", handler.DeleteSsd)
 	//// scripts
 	// ...
-
 	// sys-listen
 	go func() {
 		log.Fatal(sys.Listen(config.Pick("service.system.host").String() + ":" + config.Pick("service.system.port").String()))
 	}()
 
-	//time.Sleep(1 * time.Second)
-
-	// ssd
-	ssd := fiber.New()
+	// ssd ////////////////////////////////////////////////////////////////////
+	// for console display correctly
+	time.Sleep(10 * time.Millisecond)
+	// init ssd
+	ssd.Dir = config.Pick("ssd.dir").String()
+	err = ssd.Init()
+	if err != nil {
+		log.Panic(err)
+	}
+	// save ssd warn log
+	if ssd.Warn != nil {
+		log.Warn(ssd.Warn)
+		log.Info(errors.New("load default ssd"))
+	}
+	// ssd-service
+	ssd := fiber.New(fiber.Config{
+		ServerHeader: "http-ssd-service",
+		AppName:      "HTTP SSD Service (SSD)",
+	})
 	ssd.Use(logger.New())
 	if config.Pick("service.system.cors").Bool() {
 		log.Info("ssd cors on")

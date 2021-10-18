@@ -9,11 +9,11 @@ import (
 )
 
 var Dir = "logs/"
-var Level = "warn"
+var Level = "trace"
 
-func Init() (err error) {
-	var name = time.Now().Format("2006-01-02T15-04-05")
-	var path = Dir + name + ".log"
+func Init() error {
+	name := time.Now().Format("2006-01-02T15-04-05")
+	path := Dir + name + ".log"
 	switch Level {
 	case "panic":
 		logrus.SetLevel(logrus.PanicLevel)

@@ -7,6 +7,35 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+//file
+func PostSsds(c *fiber.Ctx) error {
+	err := ssd.Save()
+	if err != nil {
+		log.Trace(err)
+		return c.Status(400).JSON(&fiber.Map{
+			"success": false,
+			"message": err.Error(),
+		})
+	}
+	return c.JSON(&fiber.Map{
+		"success": true,
+	})
+}
+func GetSsds(c *fiber.Ctx) error {
+	list, err := ssd.List()
+	if err != nil {
+		log.Trace(err)
+		return c.Status(400).JSON(&fiber.Map{
+			"success": false,
+			"message": err.Error(),
+		})
+	}
+	return c.JSON(&fiber.Map{
+		"success": true,
+		"data":    list,
+	})
+}
+
 //data
 func PostSsd(c *fiber.Ctx) error {
 	uri := c.Params("*")
@@ -109,34 +138,5 @@ func DeleteSsd(c *fiber.Ctx) error {
 	// }
 	return c.JSON(&fiber.Map{
 		"success": true,
-	})
-}
-
-//file
-func PostSsds(c *fiber.Ctx) error {
-	err := ssd.Save()
-	if err != nil {
-		log.Trace(err)
-		return c.Status(400).JSON(&fiber.Map{
-			"success": false,
-			"message": err.Error(),
-		})
-	}
-	return c.JSON(&fiber.Map{
-		"success": true,
-	})
-}
-func GetSsds(c *fiber.Ctx) error {
-	list, err := ssd.List()
-	if err != nil {
-		log.Trace(err)
-		return c.Status(400).JSON(&fiber.Map{
-			"success": false,
-			"message": err.Error(),
-		})
-	}
-	return c.JSON(&fiber.Map{
-		"success": true,
-		"data":    list,
 	})
 }
