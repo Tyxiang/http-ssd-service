@@ -2,10 +2,12 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"http-ssd-service/pkg/config"
 	"http-ssd-service/pkg/handler"
 	"http-ssd-service/pkg/log"
 	"http-ssd-service/pkg/ssd"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -13,47 +15,44 @@ import (
 )
 
 func main() {
-	// load config
-	var earlyErr error // for early err before log init
-	err := config.Load("last")
+	// init config
+	config.Dir = "configs/"
+	err := config.Init()
 	if err != nil {
-		earlyErr = err
-		err = config.Load("default")
-	}
-	if err != nil {
-		// default config file lost
-		panic(err)
+		//panic(err)
+		fmt.Println("failed to init config, program exit")
+		os.Exit(1)
 	}
 	// init log
 	log.Dir = config.Pick("log.dir").String()
-	err = log.Init(config.Pick("log.level").String())
+	log.Level = config.Pick("log.level").String()
+	err = log.Init()
 	if err != nil {
-		panic(err)
+		//panic(err)
+		fmt.Println("failed to init log, program exit")
+		os.Exit(1)
 	}
-	// save early log
+	// save config warn log
 	log.Info("service start ... ")
-	if earlyErr != nil {
-		log.Warn(earlyErr) //trace debug info warn error fatal panic
+	if config.Warn != nil {
+		log.Warn(config.Warn)
 		log.Info(errors.New("load default config"))
 	}
 	// load ssd
 	ssd.Dir = config.Pick("ssd.dir").String()
-	err = ssd.Load("last")
+	err = ssd.Init()
 	if err != nil {
-		// last ssd file lost
-		log.Warn(err)
-		log.Info(errors.New("load default ssd"))
-		err = ssd.Load("default")
-	}
-	if err != nil {
-		// default ssd file lost
 		log.Panic(err)
 	}
-
+	// save ssd warn log
+	if ssd.Warn != nil {
+		log.Warn(ssd.Warn)
+		log.Info(errors.New("load default ssd"))
+	}
 	// sys
 	sys := fiber.New()
-	sys.Use(logger.New())
-	if config.Pick("service.system.cors").Bool() == true {
+	sys.Use(logger.New()) // http log to console
+	if config.Pick("service.system.cors").Bool() {
 		log.Info("system cors on")
 		sys.Use(cors.New())
 	}
@@ -81,15 +80,19 @@ func main() {
 	sys.Put("/ssds/:name", handler.PutSsd)
 	sys.Delete("/ssds/:name", handler.DeleteSsd)
 	//// scripts
+	// ...
+
 	// sys-listen
 	go func() {
 		log.Fatal(sys.Listen(config.Pick("service.system.host").String() + ":" + config.Pick("service.system.port").String()))
 	}()
 
+	//time.Sleep(1 * time.Second)
+
 	// ssd
 	ssd := fiber.New()
 	ssd.Use(logger.New())
-	if config.Pick("service.system.cors").Bool() == true {
+	if config.Pick("service.system.cors").Bool() {
 		log.Info("ssd cors on")
 		ssd.Use(cors.New())
 	}

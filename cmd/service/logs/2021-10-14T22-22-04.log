@@ -1,3 +1,0 @@
-time="2021-10-14T22:22:04+08:00" level=info msg="service start ... "
-time="2021-10-14T22:22:04+08:00" level=warning msg="open ssds/last.json: The system cannot find the file specified."
-time="2021-10-14T22:22:04+08:00" level=info msg="load default ssd"

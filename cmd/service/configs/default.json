@@ -1,14 +1,14 @@
 {
   "name": "http ssd service",
   "ssd": {
-    "dir": "/ssds"
+    "dir": "ssds/"
   },
   "log": {
-    "dir": "/logs",
+    "dir": "logs/",
     "level": "trace"
   },
   "script": {
-    "dir": "/scripts"
+    "dir": "scripts/"
   },
   "service": {
     "system": {

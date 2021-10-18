@@ -1,2 +1,2 @@
-go run main.go
+go run main.go configs/last.json
 pause
