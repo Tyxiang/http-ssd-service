@@ -1,6 +1,8 @@
 package ssd
 
-import "testing"
+import (
+	"testing"
+)
 
 func init() {
 	bufferBytes = []byte(
@@ -21,9 +23,15 @@ func init() {
 	  }`)
 }
 
+// func TestGet(t *testing.T) {
+// 	data, err := Get("")
+// 	fmt.Println(data, err)
+// }
+
 func BenchmarkGet(b *testing.B) {
-	b.ResetTimer()
-	for i := 0; i < 1000; i++ {
-		Get("users.0.name")
+	//b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Get("")
 	}
+	//fmt.Println(Get(""))
 }

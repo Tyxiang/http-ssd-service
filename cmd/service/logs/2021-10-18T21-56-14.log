@@ -1,0 +1,7 @@
+time="2021-10-18T21:56:14+08:00" level=info msg="service start ... "
+time="2021-10-18T21:56:14+08:00" level=warning msg="open configs/last.json: The system cannot find the file specified."
+time="2021-10-18T21:56:14+08:00" level=info msg="load default config"
+time="2021-10-18T21:57:25+08:00" level=trace msg="not exist"
+time="2021-10-18T21:58:31+08:00" level=trace msg="not exist"
+time="2021-10-18T21:58:36+08:00" level=trace msg="not exist"
+time="2021-10-18T21:58:37+08:00" level=trace msg="not exist"

@@ -83,7 +83,7 @@ func main() {
 
 	// ssd ////////////////////////////////////////////////////////////////////
 	// for console display correctly
-	time.Sleep(10 * time.Millisecond)
+	time.Sleep(15 * time.Millisecond)
 	// init ssd
 	ssd.Dir = config.Pick("ssd.dir").String()
 	err = ssd.Init()
