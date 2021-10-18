@@ -1,3 +1,0 @@
-time="2021-10-18T21:54:50+08:00" level=info msg="service start ... "
-time="2021-10-18T21:54:50+08:00" level=warning msg="open configs/last.json: The system cannot find the file specified."
-time="2021-10-18T21:54:50+08:00" level=info msg="load default config"
