@@ -2,12 +2,14 @@ package handler
 
 import (
 	"errors"
+	"fmt"
 	"strings"
 
 	"github.com/tidwall/gjson"
 )
 
 func uri_to_path(uri string) string {
+	//fmt.Println(uri)
 	path := strings.Trim(uri, "/")
 	words := [][]string{
 		{"/", "."},
@@ -16,9 +18,9 @@ func uri_to_path(uri string) string {
 		{"]", ""},
 		{"$", "#"},
 		{"_", "?"},
-		{"..", "\\."},
-		{"%7B", "{"},
-		{"%7D", "}"},
+		{"..", "\\."}, // {"fav\.movie":"Deer Hunter"}
+		// {"%7B", "{"},
+		// {"%7D", "}"},
 		{"%22", "\""},
 		{"%3E", ">"},
 		{"%3C", "<"},
@@ -26,7 +28,7 @@ func uri_to_path(uri string) string {
 	for i := range words {
 		path = strings.Replace(path, words[i][0], words[i][1], -1)
 	}
-	//fmt.Println(path)
+	fmt.Println(path)
 	return path
 }
 
