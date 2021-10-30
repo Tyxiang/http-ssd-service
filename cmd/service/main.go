@@ -26,8 +26,8 @@ func main() {
 		os.Exit(1)
 	}
 	// init log
-	log.Dir = config.Item("log.dir").String()
-	log.Level = config.Item("log.level").String()
+	log.Dir = config.Get("log.dir").(string)
+	log.Level = config.Get("log.level").(string)
 	err = log.Init()
 	if err != nil {
 		// panic(err)
@@ -46,7 +46,7 @@ func main() {
 		AppName:      "HTTP SSD Service (System)",
 	})
 	sys.Use(logger.New()) // http log to console
-	if config.Item("service.system.cors").Bool() {
+	if config.Get("service.system.cors").(bool) {
 		log.Info("system cors on")
 		sys.Use(cors.New())
 	}
@@ -78,14 +78,14 @@ func main() {
 	// ...
 	// sys-listen
 	go func() {
-		log.Fatal(sys.Listen(config.Item("service.system.host").String() + ":" + config.Item("service.system.port").String()))
+		log.Fatal(sys.Listen(config.Get("service.system.host").(string) + ":" + config.Get("service.system.port").(string)))
 	}()
 
 	// ssd ////////////////////////////////////////////////////////////////////
 	// for console display correctly
 	time.Sleep(15 * time.Millisecond)
 	// init ssd
-	ssd.Dir = config.Item("ssd.dir").String()
+	ssd.Dir = config.Get("ssd.dir").(string)
 	err = ssd.Init()
 	if err != nil {
 		log.Panic(err)
@@ -101,7 +101,7 @@ func main() {
 		AppName:      "HTTP SSD Service (SSD)",
 	})
 	ssd.Use(logger.New())
-	if config.Item("service.system.cors").Bool() {
+	if config.Get("service.system.cors").(bool) {
 		log.Info("ssd cors on")
 		ssd.Use(cors.New())
 	}
@@ -111,5 +111,5 @@ func main() {
 	ssd.Put("/*", handler.PutSsd)
 	ssd.Delete("/*", handler.DeleteSsd)
 	// ssd-listen
-	log.Fatal(ssd.Listen(config.Item("service.ssd.host").String() + ":" + config.Item("service.ssd.port").String()))
+	log.Fatal(ssd.Listen(config.Get("service.ssd.host").(string) + ":" + config.Get("service.ssd.port").(string)))
 }

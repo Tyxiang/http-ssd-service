@@ -58,18 +58,11 @@ func GetSsd(c *fiber.Ctx) error {
 	u := c.Params("*")
 	path, property := parse(u)
 	var data interface{}
-	var err error
 	if property == "type" {
-		data, err = ssd.GetType(path)
-	} else {
-		data, err = ssd.Get(path)
+		data = ssd.GetType(path)
 	}
-	if err != nil {
-		log.Trace(err)
-		return c.Status(400).JSON(&fiber.Map{
-			"success": false,
-			"message": err.Error(),
-		})
+	if property == "" {
+		data = ssd.Get(path)
 	}
 	return c.JSON(&fiber.Map{
 		"success": true,

@@ -29,16 +29,12 @@ func Add(path string, data interface{}) error {
 	return nil
 }
 
-func Get(path string) (interface{}, error) {
+func Get(path string) interface{} {
 	if path == "" {
 		path = "@this"
 	}
 	data := gjson.Get(buffer, path).Value()
-	// if data == nil {
-	// 	err := errors.New("not exist")
-	// 	return nil, err
-	// }
-	return data, nil
+	return data
 }
 
 func Set(path string, data interface{}) error {
@@ -83,9 +79,4 @@ func Del(path string) error {
 		}
 	}
 	return nil
-}
-
-func Item(path string) gjson.Result {
-	data := gjson.Get(buffer, path)
-	return data
 }

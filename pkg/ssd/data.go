@@ -33,12 +33,12 @@ func Add(path string, data []byte) error {
 	return nil
 }
 
-func Get(path string) (interface{}, error) {
+func Get(path string) interface{} {
 	if path == "" {
 		path = "@this"
 	}
 	data := gjson.Get(buffer, path).Value()
-	return data, nil
+	return data
 }
 
 func Set(path string, data []byte) error {
@@ -89,11 +89,11 @@ func Del(path string) error {
 	return nil
 }
 
-func GetType(path string) (interface{}, error) {
-	data, err := Get(path)
-	if err != nil {
-		return nil, err
+func GetType(path string) interface{} {
+	if path == "" {
+		path = "@this"
 	}
+	data := gjson.Get(buffer, path).Value()
 	var r interface{}
 	switch data.(type) {
 	case string:
@@ -111,5 +111,5 @@ func GetType(path string) (interface{}, error) {
 	default:
 		r = "other"
 	}
-	return r, nil
+	return r
 }

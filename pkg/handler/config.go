@@ -34,14 +34,7 @@ func PostConfig(c *fiber.Ctx) error {
 func GetConfig(c *fiber.Ctx) error {
 	u := c.Params("*")
 	path, _ := parse(u)
-	data, err := config.Get(path)
-	if err != nil {
-		log.Trace(err)
-		return c.Status(400).JSON(&fiber.Map{
-			"success": false,
-			"message": err.Error(),
-		})
-	}
+	data := config.Get(path)
 	return c.JSON(&fiber.Map{
 		"success": true,
 		"data":    data,
