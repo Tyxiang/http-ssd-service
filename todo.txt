@@ -1,1 +1,1 @@
-master
+- auto add  logs/ scripts/ ssds/
