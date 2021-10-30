@@ -14,6 +14,7 @@ func Read(name string) ([]byte, error) {
 	}
 	return data, nil
 }
+
 func List() ([]string, error) {
 	files, err := ioutil.ReadDir(Dir)
 	if err != nil {
@@ -27,6 +28,7 @@ func List() ([]string, error) {
 	}
 	return names, nil
 }
+
 func Remove(name string) error {
 	path := Dir + name + ".log"
 	err := os.Remove(path)

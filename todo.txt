@@ -1,1 +1,1 @@
-- auto add  logs/ scripts/ ssds/
+- error needs to be sorted out

@@ -30,7 +30,6 @@ func main() {
 	log.Level = config.Get("log.level").(string)
 	err = log.Init()
 	if err != nil {
-		// panic(err)
 		fmt.Println("failed to init log, program exit")
 		os.Exit(1)
 	}
@@ -83,17 +82,12 @@ func main() {
 
 	// ssd ////////////////////////////////////////////////////////////////////
 	// for console display correctly
-	time.Sleep(15 * time.Millisecond)
+	time.Sleep(30 * time.Millisecond)
 	// init ssd
 	ssd.Dir = config.Get("ssd.dir").(string)
 	err = ssd.Init()
 	if err != nil {
-		log.Panic(err)
-	}
-	// save ssd warn log
-	if ssd.Warn != nil {
-		log.Warn(ssd.Warn)
-		log.Info(errors.New("load default ssd"))
+		log.Warn(err)
 	}
 	// ssd-service
 	ssd := fiber.New(fiber.Config{
