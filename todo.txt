@@ -1,2 +1,2 @@
-- GetType 未完成；
-- 用 AB 测速；
+return-string
+
