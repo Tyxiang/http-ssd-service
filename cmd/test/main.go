@@ -1,10 +1,26 @@
 package main
 
-import "github.com/tidwall/sjson"
+import (
+	"github.com/tidwall/gjson"
+)
 
-const json = `{"name":["abc","123"],"age":47}`
+var buffer = `{
+		"name": "http ssd service",
+		"logLevel": "trace",
+		"system": {
+		"host": "127.0.0.1",
+		"port": "8001",
+		"cors": false
+	},
+	"ssd": {
+		"host": "127.0.0.1",
+		"port": "8000",
+		"cors": true,
+		"level": 0
+	}
+}`
 
 func main() {
-	value, _ := sjson.Set(json, "name.-1", "Anderson")
-	println(value)
+	data := gjson.Get(buffer, "system").Indexes
+	println(data)
 }

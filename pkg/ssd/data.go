@@ -8,76 +8,108 @@ import (
 )
 
 func Add(path string, data []byte) error {
+	if !gjson.Valid(string(data)) {
+		err := errors.New("wrong data type")
+		return err
+	}
 	if path == "" {
-		if gjson.GetBytes(bufferBytes, "@this").Exists() {
+		if gjson.Get(buffer, "@this").Exists() {
 			err := errors.New("already exist")
 			return err
 		}
-		bufferBytes = data
+		buffer = string(data)
 	}
 	if path != "" {
-		if gjson.GetBytes(bufferBytes, path).Exists() {
+		if gjson.Get(buffer, path).Exists() {
 			err := errors.New("already exist")
 			return err
 		}
 		var err error
-		bufferBytes, err = sjson.SetRawBytes(bufferBytes, path, data)
+		buffer, err = sjson.Set(buffer, path, data)
 		if err != nil {
 			return err
 		}
 	}
 	return nil
 }
-func Get(path string) (interface{}, error) {
+
+func Get(path string) (string, error) {
 	if path == "" {
 		path = "@this"
 	}
-	data := gjson.GetBytes(bufferBytes, path).Value()
-	if data == nil {
-		err := errors.New("not exist")
-		return nil, err
-	}
+	data := gjson.Get(buffer, path).Raw
 	return data, nil
 }
+
 func Set(path string, data []byte) error {
+	if !gjson.Valid(string(data)) {
+		err := errors.New("wrong data type")
+		return err
+	}
 	if path == "" {
-		if !gjson.GetBytes(bufferBytes, "@this").Exists() {
+		if !gjson.Get(buffer, "@this").Exists() {
 			err := errors.New("not exist")
 			return err
 		}
-		bufferBytes = data
+		buffer = string(data)
 	}
 	if path != "" {
-		if !gjson.GetBytes(bufferBytes, path).Exists() {
+		if !gjson.Get(buffer, path).Exists() {
 			err := errors.New("not exist")
 			return err
 		}
 		var err error
-		bufferBytes, err = sjson.SetRawBytes(bufferBytes, path, data)
+		buffer, err = sjson.Set(buffer, path, data)
 		if err != nil {
 			return err
 		}
 	}
 	return nil
 }
+
 func Del(path string) error {
 	if path == "" {
-		if !gjson.GetBytes(bufferBytes, "@this").Exists() {
+		if !gjson.Get(buffer, "@this").Exists() {
 			err := errors.New("not exist")
 			return err
 		}
-		bufferBytes = nil
+		buffer = ""
 	}
 	if path != "" {
-		if !gjson.GetBytes(bufferBytes, path).Exists() {
+		if !gjson.Get(buffer, path).Exists() {
 			err := errors.New("not exist")
 			return err
 		}
 		var err error
-		bufferBytes, err = sjson.DeleteBytes(bufferBytes, path)
+		buffer, err = sjson.Delete(buffer, path)
 		if err != nil {
 			return err
 		}
 	}
 	return nil
+}
+
+func GetType(path string) (string, error) {
+	/* 	data, err := Get(path)
+	   	if err != nil {
+	   		return nil, err
+	   	}
+	   	var r interface{}
+	   	switch data.(type) {
+	   	case string:
+	   		r = "string"
+	   	case float64:
+	   		r = "number"
+	   	case map[string]interface{}:
+	   		r = "object"
+	   	case []interface{}:
+	   		r = "array"
+	   	case bool:
+	   		r = "bool"
+	   	case nil:
+	   		r = "null"
+	   	default:
+	   		r = "other"
+	   	}*/
+	return "r", nil
 }

@@ -20,6 +20,7 @@ func GetLogs(c *fiber.Ctx) error {
 		"data":    list,
 	})
 }
+
 func GetLog(c *fiber.Ctx) error {
 	name := c.Params("name")
 	data, err := log.Read(name)
@@ -32,6 +33,7 @@ func GetLog(c *fiber.Ctx) error {
 	}
 	return c.Send(data)
 }
+
 func DeleteLog(c *fiber.Ctx) error {
 	name := c.Params("name")
 	err := log.Remove(name)

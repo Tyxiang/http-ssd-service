@@ -38,10 +38,10 @@ func GetSsds(c *fiber.Ctx) error {
 
 //data
 func PostSsd(c *fiber.Ctx) error {
-	uri := c.Params("*")
-	path := uri_to_path(uri)
+	u := c.Params("*")
+	path, _ := parse(u)
 	data := c.Body()
-	err := validJson(data)
+	err := ssd.Add(path, data)
 	if err != nil {
 		log.Trace(err)
 		return c.Status(400).JSON(&fiber.Map{
@@ -49,30 +49,21 @@ func PostSsd(c *fiber.Ctx) error {
 			"message": err.Error(),
 		})
 	}
-	err = ssd.Add(path, data)
-	if err != nil {
-		log.Trace(err)
-		return c.Status(400).JSON(&fiber.Map{
-			"success": false,
-			"message": err.Error(),
-		})
-	}
-	// err = ssd.Save()
-	// if err != nil {
-	// 	log.Error(err)
-	// 	return c.Status(500).JSON(&fiber.Map{
-	// 		"success": false,
-	// 		"message": err.Error(),
-	// 	})
-	// }
 	return c.JSON(&fiber.Map{
 		"success": true,
 	})
 }
+
 func GetSsd(c *fiber.Ctx) error {
-	uri := c.Params("*")
-	path := uri_to_path(uri)
-	data, err := ssd.Get(path)
+	u := c.Params("*")
+	path, property := parse(u)
+	var data string
+	var err error
+	if property == "type" {
+		data, err = ssd.GetType(path)
+	} else {
+		data, err = ssd.Get(path)
+	}
 	if err != nil {
 		log.Trace(err)
 		return c.Status(400).JSON(&fiber.Map{
@@ -80,16 +71,15 @@ func GetSsd(c *fiber.Ctx) error {
 			"message": err.Error(),
 		})
 	}
-	return c.JSON(&fiber.Map{
-		"success": true,
-		"data":    data,
-	})
+	c.Type("json", "utf-8")
+	return c.SendString(data)
 }
+
 func PutSsd(c *fiber.Ctx) error {
-	uri := c.Params("*")
-	path := uri_to_path(uri)
+	u := c.Params("*")
+	path, _ := parse(u)
 	data := c.Body()
-	err := validJson(data)
+	err := ssd.Set(path, data)
 	if err != nil {
 		log.Trace(err)
 		return c.Status(400).JSON(&fiber.Map{
@@ -97,29 +87,14 @@ func PutSsd(c *fiber.Ctx) error {
 			"message": err.Error(),
 		})
 	}
-	err = ssd.Set(path, data)
-	if err != nil {
-		log.Trace(err)
-		return c.Status(400).JSON(&fiber.Map{
-			"success": false,
-			"message": err.Error(),
-		})
-	}
-	// err = ssd.Save()
-	// if err != nil {
-	// 	log.Error(err)
-	// 	return c.Status(500).JSON(&fiber.Map{
-	// 		"success": false,
-	// 		"message": err.Error(),
-	// 	})
-	// }
 	return c.JSON(&fiber.Map{
 		"success": true,
 	})
 }
+
 func DeleteSsd(c *fiber.Ctx) error {
-	uri := c.Params("*")
-	path := uri_to_path(uri)
+	u := c.Params("*")
+	path, _ := parse(u)
 	err := ssd.Del(path)
 	if err != nil {
 		log.Trace(err)
@@ -128,14 +103,6 @@ func DeleteSsd(c *fiber.Ctx) error {
 			"message": err.Error(),
 		})
 	}
-	// err = ssd.Save()
-	// if err != nil {
-	// 	log.Error(err)
-	// 	return c.Status(500).JSON(&fiber.Map{
-	// 		"success": false,
-	// 		"message": err.Error(),
-	// 	})
-	// }
 	return c.JSON(&fiber.Map{
 		"success": true,
 	})
