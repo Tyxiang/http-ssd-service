@@ -1,0 +1,26 @@
+{
+  "name": "http ssd service",
+  "ssd": {
+    "dir": "ssds/"
+  },
+  "log": {
+    "dir": "logs/",
+    "level": "trace"
+  },
+  "script": {
+    "dir": "scripts/"
+  },
+  "service": {
+    "system": {
+      "host": "127.0.0.1",
+      "port": "8001",
+      "cors": false
+    },
+    "ssd": {
+      "host": "127.0.0.1",
+      "port": "8000",
+      "cors": true,
+      "level": 0
+    }
+  }
+}

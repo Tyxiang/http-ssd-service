@@ -1,42 +1,40 @@
 package handler
 
 import (
-	"errors"
-	"fmt"
 	"strings"
-
-	"github.com/tidwall/gjson"
 )
 
-func uri_to_path(uri string) string {
-	//fmt.Println(uri)
-	path := strings.Trim(uri, "/")
+func parse(uri string) (string, string) {
+	println(uri)
+	// remove "%20"(space)
+	for strings.HasSuffix(uri, "%20") {
+		uri = strings.TrimSuffix(uri, "%20")
+	}
+	//println(uri)
+	var path string
+	var property string
+	if strings.HasSuffix(uri, ".type") {
+		path = strings.TrimSuffix(uri, ".type")
+		property = "type"
+	} else {
+		path = uri
+	}
+	path = strings.Trim(path, "/") // remove "/"
 	words := [][]string{
+		{".", "\\."}, // input "fav.movie" output "fav\.movie" for {"fav.movie": 123}
 		{"/", "."},
-		{"[]", ".-1"},
-		{"[", "."},
-		{"]", ""},
 		{"$", "#"},
 		{"_", "?"},
-		{"..", "\\."}, // {"fav\.movie":"Deer Hunter"}
-		// {"%7B", "{"},
-		// {"%7D", "}"},
 		{"%22", "\""},
 		{"%3E", ">"},
 		{"%3C", "<"},
+		// {"%7B", "{"},
+		// {"%7D", "}"},
+		// {"()", ".-1"},
 	}
 	for i := range words {
-		path = strings.Replace(path, words[i][0], words[i][1], -1)
+		path = strings.ReplaceAll(path, words[i][0], words[i][1])
 	}
-	fmt.Println(path)
-	return path
-}
-
-func validJson(data []byte) error {
-	//err := fastjson.ValidateBytes(data)
-	if !gjson.Valid(string(data)) {
-		err := errors.New("wrong data type")
-		return err
-	}
-	return nil
+	println(path)
+	return path, property
 }
