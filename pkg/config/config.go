@@ -1,6 +1,6 @@
 package config
 
-var bufferBytes []byte
+var buffer string
 var Dir = "configs/"
 var Warn error
 

@@ -1,42 +1,44 @@
 package ssd
 
 import (
+	"errors"
 	"io/ioutil"
-	"os"
 	"strings"
 	"time"
+
+	"github.com/tidwall/gjson"
 )
 
+// load ssd file
 func Load(name string) error {
 	path := Dir + name + ".json"
-	var err error
-	bufferBytes, err = ioutil.ReadFile(path)
+	fileBytes, err := ioutil.ReadFile(path)
 	if err != nil {
 		return err
 	}
-	// if !gjson.Valid(string(bufferBytes)) {
-	// 	err := errors.New("failed to load " + name)
-	// 	return err
-	// }
+	fileString := string(fileBytes)
+	// ssd file must be json
+	if !gjson.Valid(fileString) {
+		err := errors.New("ssd file format error")
+		return err
+	}
+	buffer = fileString
 	return nil
 }
+
+// save current ssd to json file
 func Save() error {
 	name := time.Now().Format("2006-01-02T15-04-05")
 	path := Dir + name + ".json"
-	err := ioutil.WriteFile(path, bufferBytes, 0666)
+	fileBytes := []byte(buffer)
+	err := ioutil.WriteFile(path, fileBytes, 0666)
 	if err != nil {
 		return err
 	}
 	return nil
 }
-func Read(name string) ([]byte, error) {
-	path := Dir + name + ".json"
-	data, err := ioutil.ReadFile(path)
-	if err != nil {
-		return nil, err
-	}
-	return data, nil
-}
+
+// list json files in ssd dir
 func List() ([]string, error) {
 	files, err := ioutil.ReadDir(Dir)
 	if err != nil {
@@ -50,11 +52,21 @@ func List() ([]string, error) {
 	}
 	return names, err
 }
-func Remove(name string) error {
-	path := Dir + name + ".json"
-	err := os.Remove(path)
-	if err != nil {
-		return err
-	}
-	return nil
-}
+
+// func Remove(name string) error {
+// 	path := Dir + name + ".json"
+// 	err := os.Remove(path)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	return nil
+// }
+
+// func Read(name string) ([]byte, error) {
+// 	path := Dir + name + ".json"
+// 	data, err := ioutil.ReadFile(path)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	return data, nil
+// }

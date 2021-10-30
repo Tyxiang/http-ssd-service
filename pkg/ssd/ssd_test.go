@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	bufferBytes = []byte(
+	buffer =
 		`{
 		"name": "http ssd service",
 		"logLevel": "trace",
@@ -20,7 +20,7 @@ func init() {
 		  "cors": true,
 		  "level": 0
 		}
-	  }`)
+	  }`
 }
 
 // func TestGet(t *testing.T) {
@@ -28,10 +28,23 @@ func init() {
 // 	fmt.Println(data, err)
 // }
 
+func BenchmarkAdd(b *testing.B) {
+	//b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Add("test", []byte("abc"))
+	}
+}
+
 func BenchmarkGet(b *testing.B) {
 	//b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		Get("")
+		Get("system")
 	}
-	//fmt.Println(Get(""))
+}
+
+func BenchmarkSet(b *testing.B) {
+	//b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Set("test", []byte("abc"))
+	}
 }

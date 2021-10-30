@@ -1,6 +1,6 @@
 package ssd
 
-var bufferBytes []byte
+var buffer string
 var Dir = "ssds/"
 var Warn error
 

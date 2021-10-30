@@ -11,16 +11,17 @@ import (
 // load a config file
 func Load(name string) error {
 	path := Dir + name + ".json"
-	var err error
-	bufferBytes, err = ioutil.ReadFile(path)
+	fileBytes, err := ioutil.ReadFile(path)
 	if err != nil {
 		return err
 	}
+	fileString := string(fileBytes)
 	// config file must be json
-	if !gjson.Valid(string(bufferBytes)) {
+	if !gjson.Valid(fileString) {
 		err = errors.New("config file format error")
 		return err
 	}
+	buffer = fileString
 	return nil
 }
 
@@ -28,14 +29,15 @@ func Load(name string) error {
 func Save() error {
 	name := "last"
 	path := Dir + name + ".json"
-	err := ioutil.WriteFile(path, bufferBytes, 0666) //存在就覆盖；不存在创建。
+	fileBytes := []byte(buffer)
+	err := ioutil.WriteFile(path, fileBytes, 0666) //存在就覆盖；不存在创建。
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-// list json files in config file dir
+// list json files in config dir
 func List() ([]string, error) {
 	files, err := ioutil.ReadDir(Dir)
 	if err != nil {

@@ -7,81 +7,85 @@ import (
 	"github.com/tidwall/sjson"
 )
 
-func Add(path string, data []byte) error {
+func Add(path string, data interface{}) error {
 	if path == "" {
-		if gjson.GetBytes(bufferBytes, "@this").Exists() {
+		if gjson.Get(buffer, "@this").Exists() {
 			err := errors.New("already exist")
 			return err
 		}
-		bufferBytes = data
+		buffer = data.(string)
 	}
 	if path != "" {
-		if gjson.GetBytes(bufferBytes, path).Exists() {
+		if gjson.Get(buffer, path).Exists() {
 			err := errors.New("already exist")
 			return err
 		}
 		var err error
-		bufferBytes, err = sjson.SetRawBytes(bufferBytes, path, data)
+		buffer, err = sjson.Set(buffer, path, data)
 		if err != nil {
 			return err
 		}
 	}
 	return nil
 }
+
 func Get(path string) (interface{}, error) {
 	if path == "" {
 		path = "@this"
 	}
-	data := gjson.GetBytes(bufferBytes, path).Value()
-	if data == nil {
-		err := errors.New("not exist")
-		return nil, err
-	}
+	data := gjson.Get(buffer, path).Value()
+	// if data == nil {
+	// 	err := errors.New("not exist")
+	// 	return nil, err
+	// }
 	return data, nil
 }
-func Set(path string, data []byte) error {
+
+func Set(path string, data interface{}) error {
 	if path == "" {
-		if !gjson.GetBytes(bufferBytes, "@this").Exists() {
+		if !gjson.Get(buffer, "@this").Exists() {
 			err := errors.New("not exist")
 			return err
 		}
-		bufferBytes = data
+		buffer = data.(string)
 	}
 	if path != "" {
-		if !gjson.GetBytes(bufferBytes, path).Exists() {
+		if !gjson.Get(buffer, path).Exists() {
 			err := errors.New("not exist")
 			return err
 		}
 		var err error
-		bufferBytes, err = sjson.SetRawBytes(bufferBytes, path, data)
+		buffer, err = sjson.Set(buffer, path, data)
 		if err != nil {
 			return err
 		}
 	}
 	return nil
 }
+
 func Del(path string) error {
 	if path == "" {
-		if !gjson.GetBytes(bufferBytes, "@this").Exists() {
+		if !gjson.Get(buffer, "@this").Exists() {
 			err := errors.New("not exist")
 			return err
 		}
-		bufferBytes = nil
+		buffer = ""
 	}
 	if path != "" {
-		if !gjson.GetBytes(bufferBytes, path).Exists() {
+		if !gjson.Get(buffer, path).Exists() {
 			err := errors.New("not exist")
 			return err
 		}
 		var err error
-		bufferBytes, err = sjson.DeleteBytes(bufferBytes, path)
+		buffer, err = sjson.Delete(buffer, path)
 		if err != nil {
 			return err
 		}
 	}
 	return nil
 }
-func Pick(path string) gjson.Result {
-	data := gjson.GetBytes(bufferBytes, path)
+
+func Item(path string) gjson.Result {
+	data := gjson.Get(buffer, path)
 	return data
 }
