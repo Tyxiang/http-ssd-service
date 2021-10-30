@@ -57,7 +57,7 @@ func PostSsd(c *fiber.Ctx) error {
 func GetSsd(c *fiber.Ctx) error {
 	u := c.Params("*")
 	path, property := parse(u)
-	var data string
+	var data interface{}
 	var err error
 	if property == "type" {
 		data, err = ssd.GetType(path)
@@ -71,8 +71,10 @@ func GetSsd(c *fiber.Ctx) error {
 			"message": err.Error(),
 		})
 	}
-	c.Type("json", "utf-8")
-	return c.SendString(data)
+	return c.JSON(&fiber.Map{
+		"success": true,
+		"data":    data,
+	})
 }
 
 func PutSsd(c *fiber.Ctx) error {

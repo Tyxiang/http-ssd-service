@@ -33,11 +33,11 @@ func Add(path string, data []byte) error {
 	return nil
 }
 
-func Get(path string) (string, error) {
+func Get(path string) (interface{}, error) {
 	if path == "" {
 		path = "@this"
 	}
-	data := gjson.Get(buffer, path).Raw
+	data := gjson.Get(buffer, path).Value()
 	return data, nil
 }
 
@@ -89,27 +89,27 @@ func Del(path string) error {
 	return nil
 }
 
-func GetType(path string) (string, error) {
-	/* 	data, err := Get(path)
-	   	if err != nil {
-	   		return nil, err
-	   	}
-	   	var r interface{}
-	   	switch data.(type) {
-	   	case string:
-	   		r = "string"
-	   	case float64:
-	   		r = "number"
-	   	case map[string]interface{}:
-	   		r = "object"
-	   	case []interface{}:
-	   		r = "array"
-	   	case bool:
-	   		r = "bool"
-	   	case nil:
-	   		r = "null"
-	   	default:
-	   		r = "other"
-	   	}*/
-	return "r", nil
+func GetType(path string) (interface{}, error) {
+	data, err := Get(path)
+	if err != nil {
+		return nil, err
+	}
+	var r interface{}
+	switch data.(type) {
+	case string:
+		r = "string"
+	case float64:
+		r = "number"
+	case map[string]interface{}:
+		r = "object"
+	case []interface{}:
+		r = "array"
+	case bool:
+		r = "bool"
+	case nil:
+		r = "null"
+	default:
+		r = "other"
+	}
+	return r, nil
 }
