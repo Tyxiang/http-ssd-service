@@ -1,10 +1,12 @@
 package config
 
-import "os"
+import (
+	"errors"
+	"os"
+)
 
 var buffer string
 var Dir = "configs/"
-var Warn error
 
 func Init() error {
 	_, err := os.Stat(Dir)
@@ -13,11 +15,8 @@ func Init() error {
 	}
 	err = Load("last")
 	if err != nil {
-		Warn = err
-		err = Load("default")
-		if err != nil {
-			return err
-		}
+		err = errors.New("load last config failed")
+		return err
 	}
-	return err
+	return nil
 }

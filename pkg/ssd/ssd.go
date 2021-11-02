@@ -15,14 +15,8 @@ func Init() error {
 	}
 	err = Load("last")
 	if err != nil {
-		errStirng := "load last ssd error, load defualt"
-		err = Load("default")
-		if err != nil {
-			errStirng = errStirng + ". load default ssd error"
-			err = errors.New(errStirng)
-			buffer = ""
-			return err
-		}
+		err = errors.New("load last ssd failed")
+		return err
 	}
 	return nil
 }

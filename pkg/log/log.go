@@ -12,11 +12,11 @@ var Dir = "logs/"
 var Level = "trace"
 
 func Init() error {
-	name := time.Now().Format("2006-01-02T15-04-05")
 	_, err := os.Stat(Dir)
 	if os.IsNotExist(err) {
 		os.MkdirAll(Dir, os.ModeDir|os.ModePerm)
 	}
+	name := time.Now().Format("2006-01-02T15-04-05")
 	path := Dir + name + ".log"
 	switch Level {
 	case "panic":

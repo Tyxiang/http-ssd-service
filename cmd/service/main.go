@@ -32,11 +32,6 @@ func main() {
 		fmt.Println("failed to init log, program exit")
 		os.Exit(1)
 	}
-	// save config warn log
-	log.Info("service start ... ")
-	if config.Warn != nil {
-		log.Warn(config.Warn)
-	}
 	// sys-service
 	sys := fiber.New(fiber.Config{
 		ServerHeader: "http-ssd-service",
@@ -85,12 +80,8 @@ func main() {
 	ssd.Dir = config.Get("ssd.dir").(string)
 	err = ssd.Init()
 	if err != nil {
-		log.Warn(err)
-		os.Exit(1)
-	}
-	// save ssd warn log
-	if ssd.Warn != nil {
-		log.Warn(ssd.Warn)
+		fmt.Println("failed to init ssd, program exit")
+		log.Fatal(err)
 	}
 	// ssd-service
 	ssd := fiber.New(fiber.Config{
