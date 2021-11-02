@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"http-ssd-service/pkg/config"
 	"http-ssd-service/pkg/handler"
@@ -37,7 +36,6 @@ func main() {
 	log.Info("service start ... ")
 	if config.Warn != nil {
 		log.Warn(config.Warn)
-		log.Info(errors.New("load default config"))
 	}
 	// sys-service
 	sys := fiber.New(fiber.Config{
@@ -88,6 +86,11 @@ func main() {
 	err = ssd.Init()
 	if err != nil {
 		log.Warn(err)
+		os.Exit(1)
+	}
+	// save ssd warn log
+	if ssd.Warn != nil {
+		log.Warn(ssd.Warn)
 	}
 	// ssd-service
 	ssd := fiber.New(fiber.Config{

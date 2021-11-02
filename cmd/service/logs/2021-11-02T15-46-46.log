@@ -1,0 +1,2 @@
+time="2021-11-02T15:46:46+08:00" level=info msg="service start ... "
+time="2021-11-02T15:46:46+08:00" level=warning msg="load last config failed. load default"
