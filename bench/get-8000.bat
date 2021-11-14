@@ -15,4 +15,5 @@ echo get %url%
 echo.
 ab -n 1000 -c 100 %url%  | tee %name%_%time%.txt
 echo.
+
 pause
