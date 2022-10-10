@@ -1,1 +1,0 @@
-{"data":{"age":37,"children":["Sara","Alex","Jack"],"fav.movie":"Deer Hunter","friends":[{"age":44,"first":"Dale","last":"Murphy","nets":["ig","fb","tw"]},{"age":68,"first":"Roger","last":"Craig","nets":["fb","tw"]},{"age":47,"first":"Jane","last":"Murphy","nets":["ig","tw"]}],"name":{"first":"Tom","last":"Anderson"}},"success":true}
